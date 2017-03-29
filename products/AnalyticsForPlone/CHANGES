@@ -1,0 +1,21 @@
+1.3:
+
+  * Updated to use the new version of the tracker code.
+  * Add "ssl support" when site is in SSL.
+
+1.2:
+
+  * Add ability to filter analytics
+  * Enable the Google url to be changed in ZMI.
+
+1.1:
+
+  * Workaround for bug in IE.
+
+1.0:
+
+  * Product is working: it lets your site be monitored by Google Analytics.
+
+TODO:
+
+  * ?

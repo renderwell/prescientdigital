@@ -1,0 +1,14 @@
+/* <dtml-with analytics_tool> (do not remove this :) */
+
+var gaJsHost = (("https:" == document.location.protocol) ? "&dtml-google_ssl_url;" : "&dtml-google_url;");
+document.write(unescape('%3Cscript src="' + gaJsHost + '" type="text/javascript"%3E%3C/script%3E'));
+
+
+function callGoogleAnalytics() {
+  var pageTracker = _gat._getTracker('&dtml-uacct;');
+  pageTracker._initData();
+  pageTracker._trackPageview();
+}
+
+registerPloneFunction(callGoogleAnalytics);
+/* </dtml-with> */
