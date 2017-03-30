@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="pd.theme"
+        purge="False">
+
+  <configlet title="Twitter"
+             action_id="Twitter"
+             appId="pd.theme.twitter"
+             category="Products"
+             condition_expr=""
+             icon_expr="string:${portal_url}/++resource++pd.theme.browser.icons/twitter.png"
+             url_expr="string:${portal_url}/@@twitter-controlpanel"
+             visible="True"
+             i18n:attributes="title">
+             <permission>Manage portal</permission>
+  </configlet>
+
+</object>

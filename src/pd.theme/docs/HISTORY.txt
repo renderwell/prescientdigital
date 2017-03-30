@@ -1,0 +1,12 @@
+Changelog
+=========
+
+1.0dev (unreleased)
+-------------------
+- add Title tag to landing_page_view
+  [Igor Margitich]
+
+- customize richportlet - wrap image into link #763
+  [Igor Margitich]
+
+- Initial release

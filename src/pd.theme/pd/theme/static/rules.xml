@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <notheme if-path="@@manage-viewlets" />
+
+    <!-- Rules applying to a standard Plone web page -->
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <!-- Copy over the id/class attributes on the body tag.
+             This is important for per-section styling -->
+        <merge attributes="class" css:content="body" css:theme="body" />
+        <copy attributes="id dir" css:content="body" css:theme="body" />
+
+        <!-- Copy the plone base element -->
+        <prepend content="/html/head/base" theme='/html/head' />
+
+        <!-- copy all meta tags -->
+        <prepend content='/html/head/meta' theme='/html/head' />
+
+        <!-- drop the silly sunburst viewport declaration -->
+        <drop content="meta[@name='viewport']" />
+
+        <!-- Bits of plone css that we need -->
+        <!-- move all request blocking css to bottom of page -->
+        <replace css:theme="#replace-plone-css" css:content='head *[type="text/css"]' />
+
+        <!-- move all request blocking js to bottom of page -->
+        <replace css:theme="#replace-plone-js" content='/html/head/script' />
+        <!-- js to be moved to <head> -->
+            <!--  Plone's jQuery -->
+                <!-- move plone's jquery to the head (inline jquery in forms argh!) -->
+                <drop css:content="script[src*='resourceplone.app.jquery-cachekey-']" />
+                <append method="raw" css:theme="head" css:content="script[src*='resourceplone.app.jquery-cachekey-']" />
+                <!-- and when no cachekey -->
+                <drop css:content="script[src*='plone.app.jquery.js']" />
+                <append method="raw" css:theme="head" css:content="script[src*='plone.app.jquery.js']" />
+            <!-- hotjar -->
+                <drop css:content="script[src*='hotjar-cachekey-']" />
+                <append method="raw" css:theme="head" css:content="script[src*='hotjar-cachekey-']" />
+                <!-- and when no cachekey -->
+                <drop css:content="script[src*='hotjar.js']" />
+                <append method="raw" css:theme="head" css:content="script[src*='hotjar.js']" />
+            <!-- lazysizes -->
+                <drop css:content="script[src*='lazysizes.min-cachekey-']" />
+                <append method="raw" css:theme="head" css:content="script[src*='lazysizes.min-cachekey-']" />
+                <!-- and when no cachekey -->
+                <drop css:content="script[src*='lazysizes.min.js']" />
+                <append method="raw" css:theme="head" css:content="script[src*='lazysizes.min.js']" />
+        <!-- end js to move ot <head -->
+
+        <drop css:theme="#app-js" if="$is_anon = True" />
+        <drop css:theme="#app-no-jquery-js" if="$is_anon != True" />
+
+        <rules if-content="not((//*[@id='portal-column-two']) or (//*[@id='portal-column-one']))">
+            <drop css:theme=".diazo-2-column-left" />
+            <drop css:theme=".diazo-2-column-right" />
+            <drop css:theme=".diazo-3-column" />
+        </rules>
+        <rules if-content="(//*[@id='portal-column-one']) and not(//*[@id='portal-column-two'])">
+            <drop css:theme=".diazo-1-column" />
+            <drop css:theme=".diazo-2-column-right" />
+            <drop css:theme=".diazo-3-column" />
+        </rules>
+        <rules if-content="(//*[@id='portal-column-two']) and not(//*[@id='portal-column-one'])">
+            <drop css:theme=".diazo-1-column" />
+            <drop css:theme=".diazo-2-column-left" />
+            <drop css:theme=".diazo-3-column" />
+        </rules>
+        <rules if-content="(//*[@id='portal-column-one']) and (//*[@id='portal-column-two'])">
+            <drop css:theme=".diazo-1-column" />
+            <drop css:theme=".diazo-2-column-left" />
+            <drop css:theme=".diazo-2-column-right" />
+        </rules>
+
+        <replace css:theme="title"
+            css:content="title" />
+
+        <drop css:theme=".diazo-comment" />
+
+        <replace css:theme="#below-opening-body"
+            css:content-children="#analytics-code" />
+
+        <replace css:theme=".replace-people-nav"
+            css:content-children="#intranet_inner" />
+
+        <!-- then replace contents of top-level uls -->
+        <replace css:theme=".replace-site-search"
+            css:content="#portal-searchbox form" />
+
+        <replace css:theme=".replace-main-nav"
+            css:content=".menu--site-nav" />
+
+        <replace css:theme-children=".diazo-left-column"
+                 css:content-children="#portal-column-one" />
+
+        <append css:theme="main"
+                 css:content="#portal-column-content" />
+
+        <rules css:if-not-content=".template-compose">
+            <drop css:content=".hero" />
+            <replace css:theme="#hero-placeholder"
+                css:content=".hero"
+                method="raw"/>
+        </rules>
+        <rules css:if-not-content=".hero">
+            <drop css:theme="#hero-placeholder" />
+        </rules>
+
+        <replace css:theme-children="aside"
+                 css:content-children="#portal-column-two" />
+
+        <replace css:theme-children="footer .footer-social"
+                 css:content-children="#social-media-icons" />
+    </rules>
+</rules>

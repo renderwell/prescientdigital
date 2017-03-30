@@ -1,0 +1,18 @@
+<div class="portlet testimonialsPortlet"
+     i18n:domain="plone"
+     tal:define="collection_url view/collection_url;
+                 label_url view/show_more_label">
+    <div class="portletHeader">
+        <a tal:attributes="href string:${context/portal_url}/${label_url}" 
+           tal:condition="view/data/show_more"
+           tal:content="view/data/header"></a>
+        <span tal:condition="not:view/data/show_more"
+              tal:replace="view/data/header" />
+    </div>
+    <tal:events tal:repeat="item view/results">
+    <div class="testimonialItem">
+        <tal:body define="obj item/getObject;"
+                  replace="structure obj/getText" />
+    </div>
+    </tal:events>
+</div>

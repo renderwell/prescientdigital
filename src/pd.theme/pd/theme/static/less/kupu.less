@@ -1,0 +1,1013 @@
+/* - kupustyles.css - */
+@media screen {
+/*****************************************************************************
+ *
+ * Kupu common styles
+ *
+ * Copyright (c) 2003-2005 Kupu Contributors. See CREDITS.txt
+ *
+ * Instead of customizing this file, it is recommended to add your own
+ * CSS file.  Feel free to use whole or parts of this for your own
+ * designs, but give credit where credit is due.
+ *
+ *****************************************************************************/
+
+/* $Id: kupustyles.css 190550 2007-05-25 09:16:10Z duncan $ */
+
+.kupu-fulleditor, .kupu-toolboxes {
+  font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+div.kupu-fulleditor .kupu-fulleditor-zoomed {
+  height: 100%;
+  padding: 0px;
+}
+
+div.kupu-fulleditor .kupu-editorframe {
+   margin: 0px;
+   margin-right: 20em;
+   border: none;
+}
+
+div.kupu-fulleditor-zoomed {
+   z-index: 100;
+   margin: 0; border: none;
+   position: fixed;
+   top: 0; left: 0;
+   background-color: white;
+}
+
+* html div.kupu-fulleditor-zoomed {
+   position: absolute; /* IE */
+}
+
+div.kupu-fulleditor-zoomed .kupu-editor-iframe {
+  border: none;
+  margin: 0;
+}
+
+div.kupu-smalleditor .kupu-editorframe {
+  margin-right: 0.2em;
+}
+
+h1.kupu-toolbox-heading, h1.kupu-toolbox-heading-closed {
+  cursor: default;
+  background-image: url("kupuimages/closed.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+h1.kupu-toolbox-heading-opened {
+  cursor: default;
+  background-image: url("kupuimages/opened.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+div.kupu-sourcemode span.kupu-tb-buttongroup,
+body.kupu-fulleditor-zoomed select { display: none; }
+body.kupu-fulleditor-zoomed div.kupu-fulleditor-zoomed select { display: inline; }
+div.kupu-sourcemode select { display: none !IMPORTANT; }
+div.kupu-sourcemode span#kupu-logo,
+div.kupu-sourcemode span#kupu-zoom,
+div.kupu-sourcemode span#kupu-source { display: inline; }
+
+div.kupu-smalleditor {
+  font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+  border: solid 3px ButtonHighlight;
+  margin: 0.2em;
+  height: 100%;
+}
+
+.kupu-tb {
+  padding: 3px;
+  margin-bottom: 0.4em;
+  background-color: ButtonFace;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.kupu-tb-buttons button {
+  color: ButtonText;
+  border: 1px solid ButtonFace;
+  margin-top: 0;
+  margin-left: 0;
+  height: 26px;
+  width: 26px;
+  background-repeat: no-repeat;
+}
+
+.kupu-tb-buttons button:hover {
+  cursor: default;
+  border: 1px solid;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.kupu-tb-buttons button:active {
+  border: 1px solid;
+  border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+}
+
+.kupu-tb-buttongroup {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+
+.kupu-bold {background-image: url("kupuimages/bold.png");}
+.kupu-bold-pressed {background-image: url("kupuimages/bold.png"); background-color: white;}
+.kupu-anchors {background-image: url("kupuimages/anchor.png");}
+.kupu-forecolor {background-image: url("kupuimages/text-color.png");}
+.kupu-hilitecolor {background-image: url("kupuimages/background-color.png");}
+
+.kupu-inthyperlink {background-image: url("kupuimages/inthyperlink.png");}
+.kupu-inthyperlink-pressed {background-image: url("kupuimages/inthyperlink.png"); background-color: white}
+.kupu-exthyperlink {background-image: url("kupuimages/exthyperlink.png");}
+.kupu-exthyperlink-pressed {background-image: url("kupuimages/exthyperlink.png"); background-color: white}
+
+.kupu-image {background-image: url("kupuimages/image.png");}
+.kupu-indent {background-image: url("kupuimages/indent.png");}
+.kupu-inserthorizontalrule {background-image: url("kupuimages/hr.png");}
+.kupu-insertorderedlist {background-image: url("kupuimages/ordered-list.png");}
+.kupu-insertunorderedlist {background-image: url("kupuimages/unordered-list.png");}
+.kupu-insertdefinitionlist {background-image: url("kupuimages/definitionlist.png");}
+.kupu-italic {background-image: url("kupuimages/italic.png");}
+.kupu-italic-pressed {background-image: url("kupuimages/italic.png"); background-color: white}
+.kupu-justifycenter {background-image: url("kupuimages/justify-center.png");}
+.kupu-justifyleft {background-image: url("kupuimages/justify-left.png");}
+.kupu-justifyright {background-image: url("kupuimages/justify-right.png");}
+button.kupu-logo {background-image: url("kupuimages/kupu_icon.gif");}
+.kupu-outdent {background-image: url("kupuimages/outdent.png");}
+.kupu-redo {background-image: url("kupuimages/redo.png");}
+.kupu-save {background-image: url("kupuimages/save.png");}
+.kupu-save-and-exit {background-image: url("kupuimages/exit.gif");}
+.kupu-space {background-image: url("kupuimages/space.gif");}
+.kupu-source {background-image: url("kupuimages/view-source.png");}
+.kupu-spellchecker {background-image: url("kupuimages/text-check.png");}
+.kupu-subscript {background-image: url("kupuimages/subscript.png");}
+.kupu-subscript-pressed {background-image: url("kupuimages/subscript.png"); background-color: white}
+.kupu-superscript {background-image: url("kupuimages/superscript.png");}
+.kupu-superscript-pressed {background-image: url("kupuimages/superscript.png"); background-color: white}
+.kupu-table {background-image: url("kupuimages/table.png");}
+.kupu-underline {background-image: url("kupuimages/underline.png");}
+.kupu-underline-pressed {background-image: url("kupuimages/underline.png"); background-color: white}
+.kupu-undo {background-image: url("kupuimages/undo.png");}
+.kupu-removelink {background-image: url("kupuimages/remove.png");}
+.kupu-removeimage {background-image: url("kupuimages/remove.png");}
+.kupu-zoom {background-image: url("kupuimages/zoom-in.gif");}
+.kupu-zoom-pressed {background-image: url("kupuimages/zoom-out.gif");}
+
+.kupu-tb-buttons button.invisible { 
+  display: none;
+  /*visibility: hidden;*/
+}
+
+.kupu-tb-buttons button.visible { 
+  display: inline;
+}
+
+div.kupu-editorframe {
+  margin-left: 0.3em;
+  margin-bottom: 0.3em;
+  border: solid 2px ButtonFace;
+}
+
+iframe.kupu-editor-iframe {
+  height: 450px;
+  width: 99%;
+}
+
+textarea.kupu-editor-textarea {
+  height: 450px;
+  width: 99%;
+  display: none;
+}
+
+div.kupu-toolboxes {
+  float: right;
+  border: solid 2px ButtonFace;
+  width: 19.4em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 0.8em;
+}
+
+div.kupu-fulleditor-zoomed div.kupu-toolboxes {
+  display: none;
+}
+
+div.kupu-toolbox, div.kupu-toolbox-active {
+  margin-bottom: 1em;
+}
+
+div.kupu-toolbox h1, div.kupu-toolbox-active h1 {
+  text-align: center;
+  width: 100%;
+  background-color: ButtonFace;
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+div.kupu-toolbox-label, span.kupu-toolbox-searchterm, 
+input.wide, select.wide, textarea.wide, button.kupu-toolbox-action, 
+div.kupu-toolbox-results {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+.wide {
+  width: 95%;
+}
+
+div.kupu-toolbox-label {
+  margin-bottom: 0.4em;
+}
+
+.kupu-toolbox-buttons {
+  text-align: center;
+}
+
+.kupu-toolbox-buttons button {
+  width: 45%;
+}
+
+div.kupu-toolbox-results {
+  border: solid 2px ButtonFace;
+  margin-top: 0.8em;
+  text-decoration: underline;
+  padding: 0.2em;
+  display: none;
+}
+
+div.kupu-toolbox table.kupu-toolbox-addtable input, 
+div.kupu-toolbox-active table.kupu-toolbox-edittable input {
+  width: 20px;
+}
+
+div.kupu-toolbox-active {
+  background-color: ButtonFace;
+}
+
+.kupu-toolbox-editlink, .kupu-toolbox-edittable,
+.kupu-ulstyles, .kupu-olstyles {
+  display: none;
+}
+
+
+div#kupu-colorchooser {
+  position: absolute;
+  visibility: hidden;
+  border: solid black 1px;
+  background-color: white;
+  padding: 0.2em;
+  font-size: small;
+}
+
+.kupu-toolboxes input, .kupu-toolboxes select, .kupu-toolboxes textarea {
+  font-size: x-small;
+  font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div#kupu-fgcolorchooser div:hover {
+  /* border: outset 1px; */
+}
+
+div.kupu-drawer {
+   overflow: auto;
+}
+
+input.disabled, button.disabled {
+   opacity:0.5;
+   filter:alpha(opacity=50);
+}
+
+}
+
+/* - kupuplone.css - */
+@media screen {
+/*****************************************************************************
+ *
+ * Kupu plone styles
+ *
+ * Copyright (c) 2003-2005 Kupu Contributors. See CREDITS.txt
+ *
+ * Feel free to use whole or parts of this for your own designs, but
+ * give credit where credit is due.
+ *
+ *****************************************************************************/
+
+/* $Id: kupuplone.css 7217 2004-11-11 13:20:56Z duncan $ */
+/*
+/*  *  *  */
+
+.kupu a {
+    color: #0678B3 !important;
+    background-color: transparent;
+    text-decoration: none !important;
+    border-bottom: 1px #cccccc solid !important;
+}
+
+
+div.kupu-toolboxes {display: none}
+
+/*select.kupu-tb-styles {display: block}*/
+
+div.kupu-tb { margin: 0; }
+div.kupu-fulleditor { margin-right: 0; width:100%; }
+div.kupu-fulleditor .kupu-editorframe {
+  margin-right: 0;
+}
+
+.drawer {
+    left: 25%;
+}
+
+
+/* Kupu pulls in Plone stylesheets. If you want a paragraph to look
+different in Kupu from Plone, then don't add rules here, add them in
+ploneCustom.css and use the kupu class to distinguish them. e.g.
+
+.pullQuote { float: right; width: 30%; }
+.kupu .pullQuote { float:none; width: auto; }
+*/
+.kupu table.invisible { 
+  border:1px solid ThreeDLightShadow; 
+} 
+
+.kupu table.invisible tr td { 
+  border:1px solid ThreeDDarkShadow; 
+} 
+
+.kupu div.pageBreak {
+    border-top: 1px dotted #ccc;
+}
+
+
+/* Hide the 'target' field in the LinkLibraryDrawer 
+
+   I've used a class as an identifier here because somehow using id
+   doesn't seem to work (Mozilla doesn't seem to apply CSS defined for
+   an id when generating HTML using XSLT).
+*/
+.kupu-linkdrawer-target-row, .kupu-linkdrawer-name-row {
+  display: none
+}
+
+textarea { width: 90%; } /* Override buggy Plone setting */
+
+/* plone customizations regarding color and borders etc */
+
+/* hide the Plone table of contents if it is visible (inline edit) */
+dl.toc {
+    display: none;
+}
+
+.kupu-tb {
+  background-color:#cde2a7;
+  padding-bottom:0px; margin:0;
+  width:99%;
+  border:1px solid #74ae0b;
+}
+
+ul.kupu-tabs li {
+  background-color:#cde2a7;
+  border:1px solid #74ae0b;
+}
+ul.kupu-tabs {
+  border-bottom: 1px solid #74ae0b;
+}
+
+div div.kupu-panels {
+  background-color: #cde2a7;
+}
+
+.kupu-tb-styles, .kupu-ulstyles, .kupu-olstyles {
+  margin-top:3px;
+  margin-bottom:4px;
+}
+
+body.documentContent { padding: 1em !important; }
+
+html.kupu-html {
+  font-size: 69%;
+}
+
+iframe.kupu-editor-iframe{
+  border:1px solid #8cacbb;
+  width:100%;
+  border-top:none;
+  margin-right: 0;
+}
+
+div.kupu-fulleditor-zoomed .kupu-editor-iframe {
+  border: none;
+  margin: 0;
+}
+
+.kupu-fulleditor-zoomed .kupu-tb {
+  width:100%;
+}
+
+/*  Button definitions - these use one image as a CSS sprite, and refer to the
+ *  image they need with an offset instead of loading 24 image files.
+ *  The sprite file has an empty space at the top to make sure that other
+ *  user-created buttons don't get any additional background bitmaps.
+ *  The original sprite file with the layers is the .pxi file - which 
+ *  unfortunately only runs on the Mac. It's the only open source pixel tool
+ *  that is fit for the purpose, but if you don't have access to it, you 
+ *  should be able to use the PNG directly.
+ */
+
+.kupu-tb-buttons button {
+  width: 24px;
+  height: 24px;
+  border-color:#cde2a7;
+/*  background-color: #cde2a7; 
+  background-position: center center;
+*/
+  margin-bottom:4px;
+  margin-right:-2px;
+
+        background: transparent url("../images/kupu/kupu_sprite.png") 0 0 no-repeat;
+
+}
+
+span.kupu-tb-buttons button:hover {
+  border:1px solid;
+  border-color:  Black Black Black Black;
+}
+
+div.kupu-tb-buttongroup {
+  margin-right:1px;
+}
+
+span.kupu-tb-buttons .kupu-bold-pressed,
+span.kupu-tb-buttons .kupu-italic-pressed,
+span.kupu-tb-buttons .kupu-subscript-pressed,
+span.kupu-tb-buttons .kupu-superscript-pressed,
+span.kupu-tb-buttons .kupu-underline-pressed {
+  border-color: Black Black Black Black;
+}
+
+button.kupu-anchors      { background-position: 0  -20px; }
+
+button.kupu-forecolor    { background-position: 0  -60px; }
+button.kupu-hilitecolor  { background-position: 0  -80px; }
+button.kupu-inthyperlink { background-position: 0 -100px; }
+button.kupu-inthyperlink-pressed { border-color: Black Black Black Black; }
+button.kupu-exthyperlink { background-position: 0 -120px; }
+button.kupu-exthyperlink-pressed { border-color: Black Black Black Black; }
+button.kupu-image        { background-position: 0 -140px; }
+button.kupu-indent       { background-position: 0 -160px; }
+button.kupu-outdent      { background-position: 0 -180px; }
+
+button.kupu-inserthorizontalrule {}
+
+button.kupu-insertorderedlist,
+button.kupu-insertorderedlist-pressed 
+                         { background-position: 0 -200px; }
+button.kupu-insertunorderedlist,
+button.kupu-insertunorderedlist-pressed 
+                         { background-position: 0 -220px; }
+button.kupu-insertdefinitionlist 
+                         { background-position: 0 -240px; }
+button.kupu-justifycenter,
+button.kupu-justifycenter-pressed
+                         { background-position: 0 -260px; }
+
+button.kupu-justifyleft,
+button.kupu-justifyleft-pressed 
+                         { background-position: 0 -280px; }
+button.kupu-justifyright,
+button.kupu-justifyright-pressed 
+                         { background-position: 0 -300px; }
+
+button.kupu-removelink,
+button.kupu-removeimage  { background-position: 0 -320px; }
+
+button.kupu-bold,
+button.kupu-bold-pressed { background-position: 0 -340px; }
+button.kupu-italic, 
+button.kupu-italic-pressed 
+                         { background-position: 0 -360px; }
+
+button.kupu-source       { background-position: 0 -380px; }
+button.kupu-table        { background-position: 0 -400px; }
+button.kupu-zoom         { background-position: 0 -420px; }
+button.kupu-zoom-pressed { background-position: 0 -440px; }
+
+
+button.kupu-save         { background-position: 0 -460px; display:none; }
+button.kupu-save-and-exit { }
+
+button.kupu-space {background-image: url("plonekupuimages/space.gif");}
+button.kupu-spellchecker {background-image: url("kupuimages/text-check.png");}
+button.kupu-subscript,
+button.kupu-subscript-pressed  {background-image: url("plonekupuimages/subscript.gif");}
+button.kupu-superscript,
+button.kupu-superscript-pressed {background-image: url("plonekupuimages/superscript.gif");}
+
+button.kupu-underline, 
+button.kupu-underline-pressed {background-image: url("plonekupuimages/underline.gif");}
+
+button.kupu-undo {background-image: url("plonekupuimages/undo.gif");}
+button.kupu-redo {background-image: url("plonekupuimages/redo.gif");}
+button.kupu-logo {background-image: url("kupuimages/kupu_icon.gif");}
+
+
+div.kupu-drawer {
+  border: solid 1px #74ae0b;
+  background-color: #cde2a7;
+  font-family: Arial, "Helvetica Neue", Helvetica;
+}
+
+h1.kupu-drawer-title {
+  border: none;
+}
+
+div.kupu-drawer table td td {
+  font-size: 100%;
+}
+
+.kupusourceoverride { display: none; }
+.kupu-sourcemode .kupusourceoverride { display: block; margin: 0 0.5em; }
+
+div.kupuoverride {
+    margin-left: 0.75em;
+}
+
+.forcekupu {
+    padding: 6px 6px 1px 0px;
+    text-transform: ;
+    height: 32px; width: auto; 
+}
+
+.kupu-dialog-button {
+    background: transparent url(linkTransparent.gif) 9px 1px no-repeat;
+    cursor: pointer;
+    font-size: 85%;
+    padding: 1px 1px 1px 15px;
+    text-transform: ;
+    border: 1px solid #8cacbb;
+    background-color: white;
+}
+#kupu-breadcrumbs {
+    text-transform: ;
+}
+
+.kupu-reference { font-size:85%;
+    border: 1px solid #8cacbb;
+}
+
+.kupu-reference .kupu-preview-row {
+   float: left;
+}
+
+.kupu-reference a .kupu-description-row {
+   display: none;
+}
+
+.kupu-reference a { position: relative; }
+
+.kupu-reference a:hover .kupu-description-row {
+   display: block;
+   position: absolute; top: 20px; left: 128px; width: 200px;
+   padding: 5px; margin: 10px; z-index: 100;
+   color: black; background: #ffffa0;
+   font: 10px Verdana, sans-serif;
+}
+
+.odd .kupu-preview-row {
+    background-color: transparent;
+}
+.even .kupu-preview-row {
+    background-color: #eef3f5;
+}
+.kupu-progress {
+    background-color: white;
+    border: 1px solid #74ae0b;
+    width: 90%; margin: 1em; position: relative;
+}
+.kupu-progressbar {
+    background-color: #cde2a7;
+    width: 50%; position:absolute;top:0;
+}
+.kupu-progresstext {
+    text-align:center;position:absolute;top:0;width:100%;
+}
+/* Firefox makes Flash objects completely invisible.
+We need to force it to display something otherwise you cannot edit existing Flash.
+A wider border makes selection possible in IE. */
+.kupu-html object, .kupu-html embed {
+   display: block;
+   background-image: url(plonekupuimages/flash-placeholder.png);
+   border: 5px #74ae0b dotted;
+}
+.kupu-html object embed, .kupu-html object object,
+.kupu-html embed embed, .kupu-html embed object {
+   display:none;
+}
+dd.image-caption {
+   text-align:left;
+   padding: 0;
+}
+dl.captioned {
+   padding: 10px;
+}
+
+/* Styling for documentation tab */
+.template-zmi_docs .contents {
+    float: right;
+    width: 30%;
+    font-size: 90%;
+    margin: 0 0 0.5em 0.5em; padding-top:0;
+    border: 1px solid #8cacbb;
+}
+.template-zmi_docs ul.auto-toc, .template-zmi_docs ul.simple {
+  list-style: none;
+}
+.template-zmi_docs .topic-title {
+    background-color: #dee7ec;
+    margin-top: 0;
+    padding: 0em 1em;
+    text-transform: ;
+    font-weight: normal;
+    line-height: 1.6em;
+    border-bottom: 1px solid #8cacbb;
+}
+.template-zmi_docs .topic-title a {
+    color: #000000;
+    border-bottom: none;
+}
+/*  */
+
+
+}
+
+/* - kupudrawerstyles.css - */
+@media screen {
+/*****************************************************************************
+ *
+ * Kupu drawer styles
+ *
+ * Copyright (c) 2003-2005 Kupu Contributors. See CREDITS.txt
+ *
+ * Instead of customizing this file, it is recommended to add your own
+ * CSS file.  Feel free to use whole or parts of this for your own
+ * designs, but give credit where credit is due.
+ *
+ *****************************************************************************/
+
+/* $Id: kupudrawerstyles.css 195359 2007-11-08 15:14:05Z duncan $ */
+
+.kupu-drawer {
+  position: absolute;
+  display: none;
+  border: solid 1px gray;
+  border-top: solid 10px #c0c0c0;
+  background-color: ButtonFace;
+  padding: 0 8px 8px 8px;
+  height: auto;
+  width: 640px;
+  z-index: 3;
+  color: black;
+}
+
+.kupu-maskframe {
+  position:absolute;
+  z-index: 3;
+}
+
+.kupu-tabledrawer {
+  width: 408px;
+  left: 320px;
+}
+.kupu-tabledrawer .kupu-panels,
+.kupu-tabledrawer .kupu-panels table,
+.kupu-tabledrawer div.kupu-dialogbuttons {
+  width: 400px;
+}
+
+h1.kupu-library-title {
+   height: auto; width: auto;
+   margin-bottom: 0;
+   clear: none;
+}
+
+#kupu-searchbox {
+  float: right;
+}
+#kupu-searchbox form {
+  margin-bottom: 0;
+}
+input#kupu-searchbox-input {
+  width: 8em;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  padding: 2px;
+}
+
+.kupu-title-row label,
+.kupu-description-row label,
+.kupu-alt-row label {
+   display: block;
+}
+
+div.kupu-linkdrawer-addlink td {
+  border: 0;
+}
+.kupu-alt-row input { width: 220px; }
+.kupu-linkdrawer-input {
+   width: 500px;
+}
+.kupu-embed-input {
+   width: 500px;
+   height: 20em;
+}
+iframe.kupu-linkdrawer-preview {
+  width: 100%; height:20em;
+}
+.kupu-preview-row {
+  float: right;
+  text-align:right;
+  padding: 0 0 0.5em 0.5em;
+  background-color: white;
+}
+.kupu-preview-row img {
+   padding-top: 0.5em;
+}
+
+h1.kupu-drawer-title {
+  margin-top: 12px;
+  padding: 0;
+  clear:none;
+}
+
+h1.kupu-title-row, div.kupu-description-row {
+   margin-top: 0;
+   padding-top: 0;
+   clear: none;
+   height: auto; line-height: 1.1em;
+}
+.kupu-description-row p { height: auto !IMPORTANT; }
+
+h1.kupu-title-row { font-size: 136%; }
+
+
+div.kupu-dialogbuttons {
+  text-align: right;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 640px; /* Mozilla bug */
+}
+
+div.kupu-panels {
+  width: 100%;
+  background-color: ButtonFace;
+  clear:both;
+}
+
+div.kupu-panels td {
+/*  font-size: 12px;*/
+  background-color: white;
+  vertical-align: top;
+}
+
+div.kupu-panels td.kupu-preview-button {
+  vertical-align: bottom;
+}
+
+div.kupu-panels table {
+ width: 100%;
+ margin: 0; 
+ padding: 0; 
+ border: 0;
+ clear:left;
+ border-spacing: 2px;
+}
+
+td.panel {
+  height: 260px; padding:0; margin:0;
+}
+
+td#kupu-librariespanel {
+  overflow: auto;
+  width: 130px;
+}
+
+div#kupu-librariesitems {
+  width: 130px;
+  white-space: nowrap;
+  height: 260px;
+  padding: 0;
+}
+
+td#kupu-resourcespanel {
+  overflow: auto;
+  width: 185px;
+}
+
+div#kupu-resourceitems {
+  white-space: nowrap;
+  width: 200px;
+  padding: 0;
+}
+.upload-allowed div#kupu-resourceitems {
+  height:236px;
+}
+
+div#kupu-properties {
+  height: 260px;
+  padding: 0 6px;
+}
+
+.overflow {
+  overflow: auto;
+  height: 260px;
+}
+
+div.response, div.collection {
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  height: 15px;
+  margin-top: 0.1em;
+  overflow: hidden;
+  padding-top: 4px;
+}
+
+div.kupu-libsource, div.kupu-libsource-selected,
+div.kupu-resource, div.kupu-collection {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 2px 2px 2px 20px;
+  vertical-align: text-bottom;
+  white-space: nowrap;
+}
+
+.kupu-busy, .kupu-busy div, .kupu-busy a:hover, .kupu-busy input , .kupu-busy select {
+  cursor: wait !IMPORTANT;
+}
+
+div.kupu-resource, div.kupu-collection { padding: 0; }
+div.kupu-resource span, div.kupu-collection span { padding: 4px 1ex 4px 0; }
+div.kupu-resource input, div.kupu-collection input {
+  margin-bottom: 5px;
+  background: transparent;
+  border: none;
+}
+
+.drawer-item-radio {
+  vertical-align: text-middle;
+  margin: 0;
+}
+
+.library-icon-library {
+  width:16px; height:16px;
+  margin: 0 2px 0 -18px;
+}
+
+.kupu-image-fields {
+  width: 270px; margin:0; padding:0;
+}
+.kupu-detail {
+  float:left;
+  width: 185px;
+  margin: 2px 0; padding: 0;
+}
+label.kupu-detail {
+  clear:left; width:75px; text-align:right;
+  margin-right: 5px;
+}
+#image-caption, #image-align-left { margin-left: 0; }
+#image-align-left, #image-align-right, #image-align-inline, #image-caption {
+  border: none;
+}
+
+div.kupu-libsource-selected {
+  background-color: ButtonFace;  
+}
+
+#kupu-tabledrawer-edittable {
+  display: none;
+}
+
+img.library-icon-collection, img.library-icon-resource {
+  padding-right: 5px;
+  height: 16px;
+  width: 16px;
+}
+
+.selected-item span {
+  background-color:#C0C0C0;
+}
+
+/* Local image upload form */
+
+#kupu-upload-file, #kupu-upload-title {
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
+  width: 95%;
+  clear:both;
+}
+
+#kupu-upload-instructions {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  clear:both;
+  line-height: normal;
+}
+
+th.kupu-toolbox-label {
+   text-align:right;
+   width: 5%;
+   white-space: nowrap;
+}
+
+ul.kupu-tabs { border-bottom: 1px solid; margin: 0; padding: 0.5em 0.5em 1px 1.5em; }
+.kupu-tabs li {
+  display: inline; padding: 2px; border: 1px solid; margin: 0 5px 0 0;
+}
+.kupu-tabs a { text-decoration: none; }
+.kupu-tabs li.selected { background: white; border-bottom: none !IMPORTANT; padding-bottom: 3px;}
+.kupu-panels table.kupu-tabbed { border:none; border-spacing: 0;}
+
+.kupu-linkdrawer-addlink .kupu-embed,
+.kupu-linkdrawer-embed .kupu-addlink { display: none; }
+.kupu-linkdrawer-addlink .watermark {
+  position: relative;
+  text-align:center;
+  top: 98px;
+  font-size: 20pt;
+}
+.kupu-linkdrawer-addlink .watermark span {
+  background-color: white;
+  opacity:0.5;
+  filter:alpha(opacity=50);
+}
+.kupu-ins-bm .hide-ins-bm, .kupu-anchor .hide-anchor, .kupu-toc .hide-toc {
+  display: none;
+}
+.kupu-ins-bm .invis-ins-bm, .kupu-anchor .invis-anchor, .kupu-toc .invis-toc {
+        visibility: hidden; /* Hide controls without changing surrounding layout */
+}
+
+.image-dimensions {
+  display: none;
+}
+
+table.kupu-ins-bm, table.kupu-toc {
+   height: 20em;
+}
+td.kupu-bm-select {
+   width: 1%;
+}
+.kupu-bm-paras {
+   height: 18em; width:100%;
+   white-space: nowrap;
+   overflow: auto;
+}
+.kupu-bm-level1 SPAN { padding-left: 2em; }
+/* Anchor drawer */
+
+.kupu-bm-help { min-height: 2.5em; }
+.kupu-bm-heading { line-height: 2em; border-bottom: 1px solid; }
+.kupu-bm-tablestyle, .kupu-bm-numbering { float:right; padding-left: 0.5em; }
+
+.kupu-drawer label {
+  font-weight: normal;
+  vertical-align:middle;
+  margin-right: 2px;
+  display: inline;
+}
+#kupu-breadcrumbs {
+  text-align: left; clear:left;
+  padding-left: 1em; padding-right: 1em;
+  height: 20px;
+  width: 600px;
+  overflow:hidden;
+}
+#kupu-breadcrumbs a {
+ text-decoration: none;
+}
+.kupu-breadcrumbSeparator {
+    font-size: 120%;
+}
+
+.kupu-locate {
+    visibility:hidden;
+    display: block;
+}
+
+.kupu-has-selection .kupu-locate {
+    visibility:visible;
+}
+.kupu-has-selection .kupu-locate a {
+    background: transparent url(kupuimages/treeCollapsed.gif) 4px 6px no-repeat;
+    padding: 1px 0px 1px 16px;
+    font-style: italic;
+}
+a.kupu-anchor-link {
+    margin-left: 1em;
+}
+
+}

@@ -1,0 +1,63 @@
+.row {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.cell {
+  position: relative;
+  float: left;
+  left: 100%;
+}
+
+.width-full { width: 100% }
+.position-0 { margin-left: -100% }
+
+.width-1\3a 2 { width: 49.1% }
+.position-1\3a 2 { margin-left: -49.1% }
+
+.width-1\3a 3 { width: 32.12% }
+.width-2\3a 3 { width: 66.06% }
+.position-1\3a 3 { margin-left: -66.06% }
+.position-2\3a 3 { margin-left: -32.12% }
+
+.width-1\3a 4 { width: 23.64% }
+.width-2\3a 4 { width: 49.09% }
+.width-3\3a 4 { width: 74.55% }
+.position-1\3a 4 { margin-left: -74.55% }
+.position-2\3a 4 { margin-left: -49.09% }
+.position-3\3a 4 { margin-left: -23.64% }
+
+// Plone Columns Width
+#portal-column-one {
+  width: 27.28%;
+}
+#portal-column-two {
+  width: 27.28%;
+  margin-left: -27.28%;
+}
+#portal-column-content.width-3\3a 4 {
+  width: 70%;
+}
+#portal-column-content.width-1\3a 2 {
+  margin-left: -70%;
+  width: 40%;
+}
+#portal-column-content.position-1\3a 4 {
+  margin-left: -70%;
+}
+
+// panel-one-third-left
+.panel-one-third-left .width-1\3a 3 {
+  width: 49.1%;
+}
+.panel-one-third-left .width-2\3a 3 {
+  width: 49.1%;
+  margin-left: -49.1%
+}
+.panel-one-third-left .width-2\3a 3 .width-1\3a 2 {
+  width: 48.14%;
+}
+.panel-one-third-left .width-2\3a 3 .width-1\3a 2.position-1\3a 2 {
+  margin-left: -48.14%;
+}

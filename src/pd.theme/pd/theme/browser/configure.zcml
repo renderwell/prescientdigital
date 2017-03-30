@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+  <include package="Products.CMFCore" />
+
+  <browser:resourceDirectory
+      name="pd.theme.browser.icons"
+      directory="icons"
+      />
+
+  <browser:page
+      name="twitter-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.TwitterControlPanel"
+      permission="cmf.ManagePortal"
+      />
+
+</configure>

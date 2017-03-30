@@ -1,0 +1,5 @@
+<layers>
+ <layer name="pd.theme"
+   interface="pd.theme.browser.interfaces.IThemeSpecific"
+ />
+</layers>

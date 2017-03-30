@@ -1,0 +1,2 @@
+<div i18n:domain="plone"
+     id="portal-footer">&copy; Copyright <tal:year tal:content="view/year" /> by Prescient Digital Media. All Rights Reserved.</div>

@@ -1,0 +1,361 @@
+// Portlets
+// --------------------------------------------------
+
+.portlet {
+  margin: 0 0 @line-height-computed;
+}
+dl.portletError {
+  background-color: @brand-danger;
+}
+.portletHeader {
+  color: #272727;
+  font-size: @font-size-large;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.portletHeader a {
+  color: #002157;
+}
+.portletItem,
+.portletFooter {
+  margin: 0;
+}
+
+.blockedPortlet .portletHeader {
+    border: 1px dashed #ddd;
+    margin: -1px;
+    background: none !important;
+}
+
+.blockedPortlet .portletHeader a {
+    color: #666;
+}
+
+.blockedPortlet .portletBlockedMessage {
+    color: white;
+    display: inline;
+}
+.portletItemDetails {
+
+}
+.managedPortlet .portletHeader {
+  font-size: 1em;
+}
+
+//Panels
+// --------------------------------------------------
+.panel {
+  .clearfix();
+}
+.add-panel a {
+  background-color: @gray-lighter;
+  border: 1px solid @gray-light;
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 5px;
+  text-align: center;
+  width: 7em;
+}
+.add-panel .cell div {
+  background-color:@gray;
+  color: #fff;
+  padding: 5px 0;
+}
+
+// Navigation portlet
+.portletNavigationTree {
+  margin-bottom: 40px;
+}
+.navTree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.portletNavigationTree a {
+  
+}
+.portletNavigationTree a:visited {
+  
+}
+.portletNavigationTree a:hover {
+  
+}
+.portletNavigationTree .portletItem {
+  border-bottom: 1px solid #ebebeb;
+}
+.navTreeItem a {
+  background: data-uri('../images/icons/nav-portlet-arrow.png') no-repeat 0 50%;
+  border-top: 1px solid #ebebeb;
+  color: #272727;
+  display: block;
+  font-weight: 600;
+  padding: 6px 10px 5px;
+}
+.navTreeItem:first-child > a,
+.navTreeItem:first-child > div > a,
+.navTreeTopNode + .navTreeItem > a {
+  border-top: 0;
+}
+.navTreeItem a:hover,
+.navTreeCurrentNode > a {
+  color: #0093cf;
+}
+.navTreeTopNode a {
+  background: none;
+  border: 0;
+  color: #595959;
+  font-weight: 700;
+  padding: 0 0 9px;
+  text-transform: uppercase;
+}
+.navTreeLevel0 {
+  
+}
+.navTreeLevel0 > .navTreeItem {
+  
+}
+.navTreeLevel1 {
+  border-top: 1px solid #ebebeb;
+  padding-left: 15px;
+}
+.navTreeLevel1 > .navTreeItem {
+  
+}
+.navTreeLevel2,
+.navTreeLevel3 {  
+  border-top: 1px solid #ebebeb;
+  padding-left: 10px;
+}
+.navTreeLevel2 .navTree {
+  
+}
+
+// Static Text Portlet
+div.portletStaticText {
+  margin: 0 0 @line-height-computed;
+}
+.portletStaticText .portletItem {
+  
+}
+
+//Calendar Portlet
+.ploneCalendar {
+  width: 100%;
+} 
+.ploneCalendar th,
+.ploneCalendar td {
+  text-align: center;
+}
+.ploneCalendar .event {
+
+}
+.ploneCalendar .todayevent {
+
+}
+.ploneCalendar .todaynoevent {
+
+}
+
+// portletRich 
+.portletRichWithIcons .portlet {
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  margin: 0 -5px 30px;
+}
+@media only screen and (max-width: 1230px) {
+  .portletRichWithIcons .portlet {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.portletRichWithIcons .portletHeader {
+  margin-bottom: 0;
+}
+.portletRichWithIcons .portletItem {
+  padding: 0 25px 5px;
+}
+.portletRichWithIcons .portletRichImageWrapper {
+  margin-bottom: 47px;
+  position: relative;
+  z-index: 2;
+  &:after {
+    content: "";
+    background-color: #002157;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 73px;
+    width: 73px;
+    position: absolute;
+    left: 50%;
+    margin-left: -36px;
+    bottom: -36px;
+    z-index: 3;
+  }
+}
+.portletRichWithWhitepapersIcon .portletRichImageWrapper:after {
+  background-image: data-uri('../images/icons/whitepapers.png');
+}
+.portletRichWithWebinarsIcon .portletRichImageWrapper:after {
+  background-image: data-uri('../images/icons/webinars.png');
+  background-position: 100% 50%;
+}
+.portletRichWithEventsIcon .portletRichImageWrapper:after {
+  background-image: data-uri('../images/icons/events.png');
+}
+.portletRichImageWrapper img {
+  border-bottom: 3px solid #002157;
+  height: auto;
+  max-width: 100%;
+  width: auto; // fix to IE8
+  vertical-align: top;
+  position: relative;
+  z-index: -1;
+}
+.portletRichWithIcons .portletHeader {
+  font-size: 1.25em;
+  text-align: center;
+}
+.portletRichtitle {
+  margin-bottom: 7px;
+}
+
+// testimonialsPortlet
+.testimonialsPortlet blockquote {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  padding: 10px 10px 10px 30px;
+  margin: 18px 0 15px;
+  position: relative;
+  .pullquote-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: -8px;
+    left: 45px;
+    border-top: 7px solid #e8e8e8;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    &:after {
+      content: "";      
+      position: absolute;
+      bottom: 1px;
+      left: -8px;
+      border-top: 8px solid #fff;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+    }
+  }
+}
+
+// portletAccordion
+.portletAccordion .portletHeader {
+  margin-bottom: 18px;
+}
+.accordionTitle {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  color: #535353;
+  cursor: pointer;
+  font-size: @font-size-small;
+  line-height: 1.82;
+  font-weight: 700;
+  padding: 9px 30px 9px 13px;
+  margin-bottom: 2px;
+  position: relative;
+  text-transform: uppercase;
+  &:after {
+    content: "+";
+    color: #969696;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: center;    
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    right: 9px;
+  }
+}
+.accordionTitle.current {
+  border-left: 2px solid #0093cf;
+  color: #272727;
+  padding-left: 12px;
+  margin-bottom: 10px;
+  &:after {
+    content: "\2013";
+    line-height: 17px;
+  }
+}
+.accordionBody {
+  padding: 0 13px;
+  margin-bottom: 10px;
+}
+
+// portletTwitterPortlet
+.portletTwitterPortlet {
+  margin-bottom: 10px;
+  & .portletHeader {
+    display: none;
+  }
+  & .portletItem {
+    // padding-left: 25px;
+    &:before {
+      content: "";
+      display: inline-block;
+      .twitterLight;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      vertical-align: top;
+    }
+    & a {
+      border-bottom: 1px solid;
+    }
+  }
+  & .portletItemDetails {
+    margin-left: 10px;
+  }
+}
+.no-svg .portletTwitterPortlet .portletItem:before {
+  display: none;
+}
+
+// subscribePortlet
+.subscribePortlet {
+  & input[type="text"] {
+    background-color: #e6e6e6;
+    border: 0;
+    border-radius: 3px;
+    color: #888;
+    font-size: @font-size-small;
+    margin: 0 3px 5px 0;
+    padding: 6px 8px;
+    width: 174px;
+  }
+  & input[type="submit"] {
+    background-color: #0093cf;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: @font-size-small;
+    font-weight: 700;
+    padding: 6px;
+    text-transform: uppercase;
+    width: 67px;
+  }
+}
+
+// staticPortlet
+.staticPortletWithIcons .portletItem {
+  padding-left: 60px;
+}
+.portletWithTopMargin {
+  margin-top: 45px;
+}

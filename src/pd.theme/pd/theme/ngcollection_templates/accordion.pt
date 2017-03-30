@@ -1,0 +1,13 @@
+<div class="portlet portletAccordion"
+    i18n:domain="plone"
+    tal:define="collection_url view/collection_url;
+                plone_view context/@@plone;
+                toLocalizedTime nocall:plone_view/toLocalizedTime;
+                getIcon nocall:plone_view/getIcon;">
+    <div class="portletHeader"
+         tal:content="view/data/header">Header</div>    
+    <tal:events tal:repeat="obj view/results">
+        <div class="accordionTitle" tal:content="obj/Title|obj/getId|obj/id">Title</div>
+        <div class="accordionBody" tal:content="obj/Description">Description</div>
+    </tal:events>
+</div>

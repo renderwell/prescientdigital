@@ -1,0 +1,111 @@
+.linkButton {
+  display: inline-block;
+  width: 170px;
+  max-width: 100%;
+  & a {
+    .linkButtonStyles;
+  }
+}
+.locationIcon {
+  background: data-uri('../images/icons/location.png') no-repeat 2px 50%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.telephoneIcon {
+  background: data-uri('../images/icons/telephone.png') no-repeat 2px 50%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.mailIcon {
+  background: data-uri('../images/icons/mail.png') no-repeat 0 50%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.whitepapersIcon {
+  background-color: #002157;
+  background-image: data-uri('../images/icons/whitepapers.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  display: inline-block;
+  width: 45px;
+  height: 60px;
+  float: left;
+  margin-left: -60px;
+}
+.webinarsIcon {
+  background-color: #002157;
+  background-image: data-uri('../images/icons/webinars.png');
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  display: inline-block;
+  width: 45px;
+  height: 60px;
+  float: left;
+  margin-left: -60px;
+}
+.eventsIcon {
+  background-color: #002157;
+  background-image: data-uri('../images/icons/events.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 60px;
+  float: left;
+  margin-left: -60px;
+}
+.mceContentBody .whitepapersIcon,
+.mceContentBody .webinarsIcon,
+.mceContentBody .eventsIcon {
+  clear: left;
+  margin: 0 10px 10px 0;
+} 
+.portletHeadline {
+  color: #404040;
+  font-size: 1.17em;
+  font-weight: 700;
+  line-height: 1.43;
+}
+
+// Embeds responsive
+//
+// Credit: Nicolas Gallagher and SUIT CSS.
+.embedResponsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0 0 56.25%;
+  overflow: hidden;
+
+  iframe,
+  embed,
+  object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  // Modifier class for 4:3 aspect ratio
+  &.embedResponsive4by3 {
+    padding-bottom: 75%;
+  }
+}
+
+// Landing Page
+.landingTitle {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1.2;
+  margin-top: 20px;
+}

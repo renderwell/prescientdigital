@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<registry>
+  <records interface="pd.theme.browser.interfaces.ITwitterSettings" />
+  <record name="collective.portletmetadata.interfaces.IMetadataSettings.css_classes" interface="collective.portletmetadata.interfaces.IMetadataSettings" field="css_classes">
+  <field type="plone.registry.field.Tuple">
+    <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="collective.portletmetadata" ns0:translate="">Please enter the list of CSS classes, one per line. Format: class or class|descriptive title.</description>
+    <required>False</required>
+    <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="collective.portletmetadata" ns0:translate="">CSS Classes</title>
+    <value_type type="plone.registry.field.TextLine"/>
+  </field>
+  <value>
+    <element>portletRichWithIcons portletRichWithWhitepapersIcon|Rich Portlet With Whitepapers Icon</element>
+    <element>portletRichWithIcons portletRichWithWebinarsIcon|Rich Portlet With Webinars Icon</element>
+    <element>portletRichWithIcons portletRichWithEventsIcon|Rich Portlet With Events Icon</element>
+    <element>staticPortletWithIcons|Static Portlet With Icons</element>
+    <element>portletWithTopMargin|Portlet With Top Margin</element>
+  </value>
+</record>
+</registry>

@@ -1,0 +1,23 @@
+<div class="owl-carousel"
+     i18n:domain="plone">
+  <tal:repeat tal:repeat="item view/results">
+    <a href="#" class="owl-carousel-item"
+        tal:define="obj item/getObject"
+        tal:attributes="href string:${obj/getRemoteUrl};">
+      <img class="owl-carousel-item-img"
+         tal:condition="python:item.portal_type in ['Image', 'SlideshowItem']"
+         tal:attributes="src string:${item/getURL}/@@images/image;
+                         alt item/Description" />
+      <div class="owl-carousel-item-content">
+        <div class="owl-carousel-item-title"
+           tal:content="item/Title">Title</div>
+        <div class="owl-carousel-item-description"
+           tal:condition="item/Description"
+           tal:content="item/Description">Description</div>
+      </div>
+    <span class="owl-carousel-item-button"
+       tal:condition="view/data/show_more"
+       tal:content="obj/getDetailtext">View Details</span>
+    </a>
+  </tal:repeat>
+</div>

@@ -1,0 +1,97 @@
+// General Styles
+body {
+  background-color: @body-bg;
+  color: @text-color;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+}
+a {
+  color: @link-color;
+  text-decoration: none;
+}
+a:hover {
+  color: @link-hover-color;
+}
+h1,
+.documentFirstHeading {
+  color: #002157;
+  font-family: @headings-font-family;
+  font-size: @font-size-large; // ~36
+  font-weight: @headings-font-weight;
+  line-height: 1.17; // ~42
+  margin: 20px 0;
+}
+.documentFirstHeading {
+  margin-top: 0;
+}
+h2 {
+  color: #002157;
+  font-family: @headings-font-family;
+  font-size: 1em;
+  font-weight: @headings-font-weight;
+  line-height: @line-height-base;
+  margin: @line-height-computed 0;
+}
+h3 {
+  color: #002157;
+  font-size: 1em;
+  line-height: @line-height-base;
+  margin: 0;
+}
+p {
+  margin: 0 0 @line-height-computed;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid @gray-light;
+  margin: @line-height-computed 0;
+}
+img {
+  border: 0;
+  vertical-align: text-bottom;
+}
+.pageContentCore img,
+.portletStaticText img {
+  height: auto;
+  max-width: 100%;
+  // width: auto; /*fix to IE8*/
+  }
+.pageContentCore table img {
+  max-width: none;
+}
+.pageContentCore .image-inline,
+.pageContentCore .image-left,
+.pageContentCore .image-right,
+.pageContentCore .tileImage {
+  padding: 3px;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+}
+*[class^="contenttype"] img {
+  padding: 0 4px 0 0;
+  border: 0;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 27px;
+  margin: 0 0 @line-height-computed;
+}
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+dd {
+  margin: 0 0 0 27px;
+}
+pre {
+  background-color: #222;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+  margin-bottom: 1em;
+  padding: 1em;
+  overflow-x: auto;
+}

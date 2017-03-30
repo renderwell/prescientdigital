@@ -1,0 +1,12 @@
+Changelog
+=========
+
+1.0 - March 12, 2015
+----------------------
+
+- Create SlideshowItem content
+  [Igor Margitich]
+
+- Initial pd.content.
+  [Igor Margitich]
+
