@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FAQulator 1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-code: nl\n"
+"Language-name: Nederlands\n"
+"Preferred-encodings: utf-8 latin1\n"
+"Domain: faqulator\n"
+
+msgid "FAQEntry"
+msgstr "Vraag"
+
+msgid "Question"
+msgstr "Vraag"
+
+msgid "Answer"
+msgstr "Antwoord"
+
+msgid "faq_question_label"
+msgstr "Vraag"
+
+msgid "faq_question"
+msgstr "Een veelgestelde vraag"
+
+msgid "faq_answer_label"
+msgstr "Antwoord"
+
+msgid "faq_answer"
+msgstr "Het antwoord op de vraag"
+
+msgid "faq_introlabel"
+msgstr "Omschrijving"
+
+msgid "faq_intro"
+msgstr "Vul hier de inleidende tekst in. Deze zal bovenaan de FAQ lijst komen te staan."
+
+msgid "faq_showheaderlabel"
+msgstr "Toon lijst met vragen"
+
+msgid "faq_showheader"
+msgstr "Toon een korte lijst met vragen bovenaan de FAQ, dit maakt navigeren makkelijker"
+
+msgid "faq_showanswerslabel"
+msgstr "Toon vragen en antwoorden"
+
+msgid "faq_showanswers"
+msgstr "Toon complete vragen en antwoorden"
+
+msgid "faq_overview"
+msgstr "FAQ Overzicht"
