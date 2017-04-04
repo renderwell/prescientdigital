@@ -4,12 +4,26 @@
     i18n_domain="pd.content">
 
   <!-- configure your content components here -->
-  
+
   <!-- -*- extra stuff goes here -*- -->
   <class class=".slideshowitem.SlideshowItem">
     <require
         permission="zope2.View"
         interface="..interfaces.ISlideshowItem"
+        />
+  </class>
+
+  <class class=".TestimonialFolder.TestimonialFolder">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ITestimonialFolder"
+        />
+  </class>
+
+  <class class=".Testimonial.Testimonial">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ITestimonial"
         />
   </class>
 

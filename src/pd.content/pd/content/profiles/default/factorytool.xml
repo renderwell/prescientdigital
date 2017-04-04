@@ -9,7 +9,8 @@
   -->
 <object name="portal_factory" meta_type="Plone Factory Tool">
   <factorytypes>
-    <!-- -*- extra stuff goes here -*- -->
     <type portal_type="SlideshowItem" />
+    <type portal_type="TestimonialFolder" />
+    <type portal_type="Testimonial" />
   </factorytypes>
 </object>

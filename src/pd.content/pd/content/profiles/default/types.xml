@@ -7,7 +7,10 @@
      which supports Plone's "display" menu.
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
-  <!-- -*- extra stuff goes here -*- -->
   <object name="SlideshowItem"
+    meta_type="Factory-based Type Information with dynamic views" />
+  <object name="TestimonialFolder"
+    meta_type="Factory-based Type Information with dynamic views" />
+  <object name="Testimonial"
     meta_type="Factory-based Type Information with dynamic views" />
 </object>

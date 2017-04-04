@@ -1,2 +1,3 @@
-# -*- extra stuff goes here -*-
 from slideshowitem import ISlideshowItem
+from TestimonialFolder import ITestimonialFolder
+from Testimonial import ITestimonial

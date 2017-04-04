@@ -1,8 +1,15 @@
 <?xml version="1.0"?>
 <rolemap>
   <permissions>
-    <!-- -*- extra stuff goes here -*- -->
     <permission name="pd.content: Add SlideshowItem" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+    <permission name="pd.content: Add TestimonialFolder" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+    <permission name="pd.content: Add Testimonial" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>

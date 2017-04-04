@@ -4,6 +4,7 @@
 PROJECTNAME = 'pd.content'
 
 ADD_PERMISSIONS = {
-    # -*- extra stuff goes here -*-
     'SlideshowItem': 'pd.content: Add SlideshowItem',
+    'TestimonialFolder': 'pd.content: Add TestimonialFolder',
+    'Testimonial': 'pd.content: Add Testimonial',
 }
