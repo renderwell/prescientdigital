@@ -7,6 +7,15 @@
        without this, we may get a permission lookup error -->
   <include package="plone.app.portlets" />
 
-	<!-- -*- extra stuff goes here -*- -->
+  <plone:portlet
+     name="testimonial_portlet"
+     interface=".testimonialportlet.ITestimonialPortlet"
+     assignment=".testimonialportlet.Assignment"
+     view_permission="zope2.View"
+     edit_permission="cmf.ManagePortal"
+     renderer=".testimonialportlet.Renderer"
+     addview=".testimonialportlet.AddForm"
+     editview=".testimonialportlet.EditForm"
+     />
 
 </configure>
