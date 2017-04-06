@@ -20,27 +20,52 @@ from plone.app.iterate.relation import WorkingCopyRelation
 
 schema = Schema((
     TextField(
-        name='text',
+        name='quote',
+        allowable_content_types=('text/plain', ),
         widget=TextAreaWidget(
-            label="Text",
-            label_msgid='label_testimonial_text',
+            label='Quote',
+            description='The testimonial text.',
+            label_msgid='label_testimonial_quote',
+            description_msgid='description_testimonial_quote',
             i18n_domain='pd.content',
         ),
     ),
     StringField(
         name='author',
         widget=StringField._properties['widget'](
-            label="Author",
+            label='Author',
             label_msgid='label_testimonial_author',
             i18n_domain='pd.content',
         ),
     ),
     StringField(
-        name='company',
+        name='position',
         widget=StringField._properties['widget'](
-            label="Company",
-            label_msgid='label_testimonial_company',
+            label='Position',
+            description='The position of the author at their organisation',
+            label_msgid='label_testimonial_position',
+            description_msgid='description_testimonial_position',
             i18n_domain='pd.content',
+        ),
+    ),
+    StringField(
+        name='organisation',
+        widget=StringField._properties['widget'](
+            label='Organisation',
+            description='The organisation the author belongs to.',
+            label_msgid='label_testimonial_organisation',
+            description_msgid='description_testimonial_organisation',
+            i18n_domain='pd.content',
+        ),
+    ),
+    BooleanField(
+        name='featured',
+        widget=BooleanField._properties['widget'](
+            label='Featured',
+            description='If selected, this testimonial will be shown in the slider on the homepage or elsewhere on the site where featured testimonials are displayed.',
+            label_msgid='label_testimonial_featured',
+            description_msgid='description_testimonial_featured',
+                i18n_domain='pd.content',
         ),
     ),
 ),
