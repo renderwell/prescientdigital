@@ -1,0 +1,24 @@
+<div id="testimonial-slider"
+     class="master-slider testimonial-slider ms-skin-default"
+     tal:define="testimonials view/get_testimonials">
+    <tal:testimonials repeat="testimonial testimonials">
+        <div class="ms-slide" data-delay="8"
+            tal:attributes="style string:background-color:${testimonial/bgcolor}">
+            <p class="parag"
+                tal:define="quote testimonial/quote;
+                            author testimonial/author;
+                            position testimonial/position;
+                            organization testimonial/organization">
+                &quot;
+                <span tal:replace="quote" />
+                &quot;
+                <br />
+                <i>&mdash;
+                    <span tal:condition="author"><span tal:replace="author" />, </span>
+                    <span tal:condition="position"><span tal:replace="position" />, </span>
+                    <span tal:replace="organization" />
+                </i>
+            </p>
+        </div>
+    </tal:testimonials>
+</div>
