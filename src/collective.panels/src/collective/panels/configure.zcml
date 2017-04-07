@@ -148,6 +148,13 @@
       />
 
   <browser:panel
+      name="fullwidth"
+      title="A2"
+      description="Single row of portlets, fullwidth"
+      template="layouts/fullwidth.pt"
+      />
+
+  <browser:panel
       name="left"
       title="B1"
       description="Split on center, then down on the left side"
