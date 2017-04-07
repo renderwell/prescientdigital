@@ -12,5 +12,7 @@
     <type portal_type="SlideshowItem" />
     <type portal_type="TestimonialFolder" />
     <type portal_type="Testimonial" />
+    <type portal_type="CaseStudyFolder" />
+    <type portal_type="CaseStudy" />
   </factorytypes>
 </object>

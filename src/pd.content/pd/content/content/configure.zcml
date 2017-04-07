@@ -5,7 +5,6 @@
 
   <!-- configure your content components here -->
 
-  <!-- -*- extra stuff goes here -*- -->
   <class class=".slideshowitem.SlideshowItem">
     <require
         permission="zope2.View"
@@ -24,6 +23,20 @@
     <require
         permission="zope2.View"
         interface="..interfaces.ITestimonial"
+        />
+  </class>
+
+  <class class=".CaseStudyFolder.CaseStudyFolder">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICaseStudyFolder"
+        />
+  </class>
+
+  <class class=".CaseStudy.CaseStudy">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICaseStudy"
         />
   </class>
 

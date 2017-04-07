@@ -13,5 +13,13 @@
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
+    <permission name="pd.content: Add CaseStudyFolder" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+    <permission name="pd.content: Add CaseStudy" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
   </permissions>
 </rolemap>
