@@ -40,4 +40,11 @@
         />
   </class>
 
+  <class class=".BannerImage.BannerImage">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IBannerImage"
+        />
+  </class>
+
 </configure>

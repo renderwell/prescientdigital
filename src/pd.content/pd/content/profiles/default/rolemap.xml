@@ -21,5 +21,9 @@
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
+    <permission name="pd.content: Add BannerImage" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
   </permissions>
 </rolemap>

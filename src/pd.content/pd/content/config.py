@@ -9,4 +9,5 @@ ADD_PERMISSIONS = {
     'Testimonial': 'pd.content: Add Testimonial',
     'CaseStudyFolder': 'pd.content: Add CaseStudyFolder',
     'CaseStudy': 'pd.content: Add CaseStudy',
+    'BannerImage': 'pd.content: Add BannerImage',
 }

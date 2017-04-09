@@ -24,4 +24,12 @@
      permission="zope2.View"
      />
 
+  <browser:viewlet
+     name="pd_banner_image"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".bannerimage.BannerImage"
+     template="bannerimage.pt"
+     permission="zope2.View"
+     />
+
 </configure>

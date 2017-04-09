@@ -14,5 +14,6 @@
     <type portal_type="Testimonial" />
     <type portal_type="CaseStudyFolder" />
     <type portal_type="CaseStudy" />
+    <type portal_type="BannerImage" />
   </factorytypes>
 </object>
