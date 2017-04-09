@@ -82,8 +82,9 @@
 
 <div class="card card--expertise text-center"
      tal:condition="view/data/card">
-    <div class="card-divider">
-        <i class="icon-desktop icon--circled"></i>
+    <div class="card-divider"
+         tal:define="card_icon view/data/card_icon">
+        <i tal:attributes="class python:card_icon and '%s icon--circled' % card_icon or 'icon-desktop icon--circled'"></i>
     </div>
     <div class="card-section">
         <h4>

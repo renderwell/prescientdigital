@@ -1,4 +1,4 @@
 <tal:wrapper define="html view/render" condition="html">
-  <h2 tal:condition="context/heading" tal:content="context/heading" />
+  <h3 class="text-center v-space-2" tal:condition="context/heading" tal:content="context/heading" />
   <tal:render content="structure html" />
 </tal:wrapper>

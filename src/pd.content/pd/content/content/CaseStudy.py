@@ -9,7 +9,8 @@ from zope.interface import implements
 from pd.content.interfaces import ICaseStudy
 from plone.portlets.interfaces import ILocalPortletAssignable
 
-from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.ATContentTypes.content.document import ATDocument
+from Products.ATContentTypes.content.document import ATDocumentSchema
 
 from pd.content.config import *
 
@@ -20,7 +21,7 @@ from plone.app.iterate.relation import WorkingCopyRelation
 
 schema = Schema((
     ImageField(
-        name="image",
+        name='image',
         searchable=False,
         sizes= {
             'large'   : (768, 768),
@@ -32,26 +33,26 @@ schema = Schema((
             'listing' :  (16, 16),
         },
         widget=ImageWidget(
-            label="Image",
+            label='Image',
             label_msgid='label_casestudy_image',
             i18n_domain='pd.content',
         ),
     ),
-    TextField(
-        name='body',
-        allowable_content_types=('text/plain', 'text/structured', 'text/html', 'application/msword',),
-        widget=RichWidget(
-            label="Body text",
-            description="The main body text for the case study",
-            allow_buttons=('bold', 'italic', 'bullist', 'link', 'unlink', 'code'),
-            rows=20,
-            label_msgid='label_casestudy_body',
-            description_msgid='description_casestudy_body',
-            i18n_domain='pd.content',
-        ),
-        default_output_type='text/html',
-        searchable=1,
-    ),
+    # TextField(
+    #     name='body',
+    #     allowable_content_types=('text/plain', 'text/structured', 'text/html', 'application/msword',),
+    #     widget=RichWidget(
+    #         label='Body text',
+    #         description='The main body text for the case study',
+    #         allow_buttons=('bold', 'italic', 'bullist', 'link', 'unlink', 'code'),
+    #         rows=20,
+    #         label_msgid='label_casestudy_body',
+    #         description_msgid='description_casestudy_body',
+    #         i18n_domain='pd.content',
+    #     ),
+    #     default_output_type='text/html',
+    #     searchable=1,
+    # ),
     StringField(
         name='link',
         widget=StringField._properties['widget'](
@@ -75,11 +76,12 @@ schema = Schema((
 ),
 )
 
-CaseStudy_schema = BaseSchema.copy() + \
+CaseStudy_schema = ATDocumentSchema.copy() + \
     schema.copy()
 
+CaseStudy_schema['description'].schemata = 'default'
 
-class CaseStudy(BaseContent, BrowserDefaultMixin):
+class CaseStudy(ATDocument):
     """
     """
     security = ClassSecurityInfo()

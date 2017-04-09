@@ -18,4 +18,15 @@
      editview=".testimonialportlet.EditForm"
      />
 
+  <plone:portlet
+     name="casestudy_portlet"
+     interface=".casestudyportlet.ICaseStudyPortlet"
+     assignment=".casestudyportlet.Assignment"
+     view_permission="zope2.View"
+     edit_permission="cmf.ManagePortal"
+     renderer=".casestudyportlet.Renderer"
+     addview=".casestudyportlet.AddForm"
+     editview=".casestudyportlet.EditForm"
+     />
+
 </configure>

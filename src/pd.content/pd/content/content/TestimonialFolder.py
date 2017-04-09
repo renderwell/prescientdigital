@@ -10,6 +10,7 @@ from pd.content.interfaces import ITestimonialFolder
 from plone.portlets.interfaces import ILocalPortletAssignable
 
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.ATContentTypes.atct import ATFolder, ATFolderSchema
 
 from pd.content.config import *
 
@@ -19,10 +20,10 @@ schema = Schema((
 ),
 )
 
-TestimonialFolder_schema = OrderedBaseFolderSchema.copy() + \
+TestimonialFolder_schema = ATFolderSchema.copy() + \
     schema.copy()
 
-class TestimonialFolder(OrderedBaseFolder, BrowserDefaultMixin):
+class TestimonialFolder(ATFolder):
     """
     """
     security = ClassSecurityInfo()

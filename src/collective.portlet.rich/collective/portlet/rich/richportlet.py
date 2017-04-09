@@ -54,6 +54,13 @@ class IRichPortlet(IPortletDataProvider):
         required=False,
         default=False)
 
+    card_icon = schema.Choice(
+        title=_(u"Card Icon"),
+        description=_(u"If you checked 'card' above, choose an icon for the card"),
+        required=False,
+        vocabulary='collective.portlet.rich.vocabularies.CardIconVocabulary',
+        )
+
     target_title_image = schema.Choice(
         title=_(u"Portlet title image"),
         description=_(u"Find the image"),
@@ -95,7 +102,7 @@ class IRichPortlet(IPortletDataProvider):
     links_css = schema.Choice(
         title=_(u"Links styles"),
         description=_(u"Choose a css style for the links list."),
-        required=True,
+        required=False,
         vocabulary='collective.portlet.rich.vocabularies.LinksCSSVocabulary',
         )
 
@@ -129,13 +136,14 @@ class Assignment(base.Assignment):
     portlet_id = None
     portlet_classes = None
     card = False
+    card_icon = None
     target_title_image = None
     title_more_url = None
     title = u"Rich portlet"
     scale = u"mini"
 
     def __init__(self, portlet_id=u"", portlet_classes=u"",
-                 card=False, target_title_image=None, title=u"",
+                 card=False, card_icon=None, target_title_image=None, title=u"",
                  title_more_url='', text=u"", links = (),
                  links_css = 'links_list', omit_border=False,
                  footer=u"", footer_more_url='',
@@ -146,6 +154,7 @@ class Assignment(base.Assignment):
         self.portlet_id = portlet_id
         self.portlet_classes = portlet_classes
         self.card = card
+        self.card_icon = card_icon
         self.target_title_image = target_title_image
         self.title = title or Assignment.title
         self.title_more_url = title_more_url

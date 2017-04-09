@@ -10,6 +10,7 @@ from pd.content.interfaces import ICaseStudyFolder
 from plone.portlets.interfaces import ILocalPortletAssignable
 
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.ATContentTypes.atct import ATFolder, ATFolderSchema
 
 from pd.content.config import *
 
@@ -19,10 +20,10 @@ schema = Schema((
 ),
 )
 
-CaseStudyFolder_schema = OrderedBaseFolderSchema.copy() + \
+CaseStudyFolder_schema = ATFolderSchema.copy() + \
     schema.copy()
 
-class CaseStudyFolder(OrderedBaseFolder, BrowserDefaultMixin):
+class CaseStudyFolder(ATFolder):
     """
     """
     security = ClassSecurityInfo()

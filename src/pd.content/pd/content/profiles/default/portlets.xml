@@ -6,9 +6,12 @@
 <portlets
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="plone">
-  <portlet
-  addview="testimonial_portlet"
-  title="Testimonials"
-  description="A portlet that displays featured testimonials"
-  />
+    <portlet
+        addview="testimonial_portlet"
+        title="Testimonials"
+        description="A portlet that displays featured testimonials" />
+    <portlet
+        addview="casestudy_portlet"
+        title="Case Studies"
+        description="A portlet that displays featured case studies" />
 </portlets>

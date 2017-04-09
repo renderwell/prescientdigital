@@ -1,0 +1,24 @@
+<div class="grid-gallery"
+    tal:define="casestudies view/get_casestudies">
+    <div class="row small-up-1 medium-up-3">
+        <h3 class="section-header text-center v-space-2">Case Studies</h3>
+
+        <div class="column column-block"
+            tal:repeat="casestudy casestudies">
+            <a class="grid-gallery-item"
+                tal:attributes="href casestudy/link">
+                <span class="grid-gallery-item__image">
+                    <img tal:attributes="src casestudy/image_url" class="thumbnail" alt="" />
+                </span>
+
+                <span class="hover-overlay"></span>
+
+                <span class="grid-gallery-item__text">
+                    <p tal:content="casestudy/description">
+                        Liberty Mutual is a US-based, Fortune 500 insurance organization employing over 45,000 employees with 900 offices across the globe.
+                    </p>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>

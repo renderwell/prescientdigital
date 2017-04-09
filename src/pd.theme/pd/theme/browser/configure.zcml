@@ -16,4 +16,12 @@
       permission="cmf.ManagePortal"
       />
 
+  <browser:viewlet
+     name="pd_global_sections"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".navigation.PDMenu"
+     template="menu.pt"
+     permission="zope2.View"
+     />
+
 </configure>

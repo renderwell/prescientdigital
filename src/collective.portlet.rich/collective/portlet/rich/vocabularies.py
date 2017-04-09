@@ -19,6 +19,14 @@ LINKS_CSS_STYLES = (
 # this one might not be wanted since we already have - the footer feature
 # #(u"links_read_more", 4, u"Read more links"),
 
+
+CARD_ICONS = (
+    (u"icon-desktop", _(u"Computer")),
+    (u"icon-volume", _(u"Speaker")),
+    (u"icon-doc-text-1", _(u"Document")),
+)
+
+
 class LinksCSSVocabulary(object):
     implements(IVocabularyFactory)
 
@@ -27,3 +35,13 @@ class LinksCSSVocabulary(object):
         return SimpleVocabulary(items)
 
 LinksCSSVocabulary = LinksCSSVocabulary()
+
+
+class CardIconVocabulary(object):
+    implements(IVocabularyFactory)
+
+    def __call__(self, context):
+        items = [SimpleTerm(value, value, title) for value, title in CARD_ICONS]
+        return SimpleVocabulary(items)
+
+CardIconVocabulary = CardIconVocabulary()

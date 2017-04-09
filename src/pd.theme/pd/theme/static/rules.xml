@@ -5,6 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <!-- The default theme, used for standard Plone web pages -->
+    <theme href="home.html" css:if-content=".section-front-page-1" />
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
     <notheme if-path="@@manage-viewlets" />
 
@@ -28,27 +29,37 @@
         <replace css:theme="title"
             css:content="title" />
 
+        <!-- NAVIGATION -->
+        <replace css:theme="#top-nav-off-canvas"
+            css:content="#portal-globalnav" />
+        <replace css:theme-children="#top-nav"
+            css:content="#portal-globalnav" />
 
-        <!--
-        FOR INTERIOR PAGES
-        -->
-        <!--
-        <replace css:theme="#content"
-            css:content="#content" />
-        -->
-
-        <!--
-        <replace css:theme="#masterslider"
-            css:content="#masterslider" />
-        -->
-
-        <!--
-        <replace css:theme="#panel-1"
-            css:content="#viewlet-below-content-body .panel-1" />
-        -->
-
+        <!-- HOME PAGE -->
         <replace css:theme="#panels"
             css:content="#viewlet-below-content-body .panels" />
+
+        <!-- INTERIOR PAGES -->
+        <replace css:theme-children="#content"
+            css:content-children="#content" />
+
+        <rules css:if-not-content=".portaltype-landingpage">
+            <drop css:theme="#top-banner" />
+            <drop css:theme="#description-callout" />
+        </rules>
+
+        <rules css:if-content=".portaltype-landingpage">
+            <replace css:theme="#top-banner h1"
+                css:content=".documentFirstHeading" method="raw"/>
+            <replace css:theme="#description-callout p"
+                css:content=".documentDescription" method="raw" />
+            <drop css:content=".documentFirstHeading" />
+            <drop css:content=".documentDescription" />
+            <drop css:theme=".top-space" />
+        </rules>
+
+        <replace css:theme-children=".portletNavigationTree"
+            css:content-children=".portletNavigationTree" />
 
         <!--
         <replace css:theme=".replace-people-nav"

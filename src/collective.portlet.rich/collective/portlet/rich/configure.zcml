@@ -12,7 +12,7 @@
 
   <five:registerPackage package="." />
   <i18n:registerTranslations directory="locales" />
-  
+
   <genericsetup:registerProfile
      name="default"
      title="Rich portlet"
@@ -20,7 +20,7 @@
      description=""
      provides="Products.GenericSetup.interfaces.EXTENSION"
      />
-  
+
   <!-- Register the portlet -->
   <plone:portlet
      name="collective.portlet.rich.RichPortlet"
@@ -32,16 +32,21 @@
      addview=".richportlet.AddForm"
      editview=".richportlet.EditForm"
      />
-  
+
   <!-- Register the vocabularies -->
   <utility
      component=".vocabularies.LinksCSSVocabulary"
-     name="collective.portlet.rich.vocabularies.LinksCSSVocabulary" 
+     name="collective.portlet.rich.vocabularies.LinksCSSVocabulary"
+     />
+
+  <utility
+     component=".vocabularies.CardIconVocabulary"
+     name="collective.portlet.rich.vocabularies.CardIconVocabulary" 
      />
 
   <browser:resource
      name="richportlet.css"
      file="richportlet.css"
      />
-  
+
 </configure>
