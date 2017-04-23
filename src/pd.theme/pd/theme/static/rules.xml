@@ -29,40 +29,62 @@
         <replace css:theme="title"
             css:content="title" />
 
-        <!-- NAVIGATION -->
+
+        <!-- TOP NAVIGATION -->
         <replace css:theme="#top-nav-off-canvas"
-            css:content="#portal-globalnav" />
+            css:content="#pd-portal-globalnav" />
         <replace css:theme-children="#top-nav"
-            css:content="#portal-globalnav" />
+            css:content="#pd-portal-globalnav" />
+
 
         <!-- HOME PAGE -->
         <replace css:theme="#panels"
             css:content="#viewlet-below-content-body .panels" />
 
+
         <!-- INTERIOR PAGES -->
         <replace css:theme-children="#content"
             css:content-children="#content" />
 
-        <rules css:if-not-content=".portaltype-landingpage">
+
+        <!-- LANDING PAGE BANNER AND DESCRIPTION -->
+        <!-- <rules css:if-not-content=".portaltype-landingpage, .portaltype-document">
             <drop css:theme="#top-banner" />
             <drop css:theme="#description-callout" />
         </rules>
 
-        <rules css:if-content=".portaltype-landingpage">
+        <rules css:if-content=".portaltype-landingpage, .portaltype-document">
             <replace css:theme="#top-banner h1"
                 css:content=".documentFirstHeading" method="raw"/>
             <replace css:theme="#description-callout p"
-                css:content=".documentDescription" method="raw" />
+                css:content="#content > .documentDescription" method="raw" />
             <drop css:content=".documentFirstHeading" />
             <drop css:content=".documentDescription" />
             <drop css:theme=".top-space" />
+        </rules> -->
+
+        <replace css:theme="#top-banner"
+            css:content="#top-banner" />
+        <replace css:theme="#description-callout"
+            css:content="#description-callout" />
+
+
+        <!-- Drop right-hand column if no side nav -->
+        <rules css:if-not-content=".portletNavigationTree">
+            <drop css:theme="#with-nav" />
+        </rules>
+        <rules css:if-content=".portletNavigationTree">
+            <drop css:theme="#without-nav" />
         </rules>
 
+
+        <!-- SIDE NAV -->
         <replace css:theme-children=".portletNavigationTree"
             css:content-children=".portletNavigationTree" />
 
-        <replace css:theme="#banner-image"
-            css:content="#banner-image" />
+        <replace css:theme="#top-banner"
+            css:content="#top-banner" />
+
 
         <!--
         <replace css:theme=".replace-people-nav"

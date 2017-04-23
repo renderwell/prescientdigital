@@ -1,3 +1,19 @@
-<div id="banner-image">
-    BANNER IMAGE
-</div>
+<tal:check condition="view/show">
+    <!-- <div id="top-banner" class="banner"
+        tal:attributes="style string:background-image:url(${context/absolute_url}/banner-image/image)"> -->
+    <!-- <div id="top-banner" class="banner"
+        tal:attributes="style string:background-image:url(view/banner_image_url)"> -->
+    <div id="top-banner" class="banner">
+        <div class="banner__scrim">
+            <h1 tal:content="context/Title">About us</h1>
+        </div>
+    </div>
+
+    <div id="description-callout" class="callout-panel v-space-2">
+        <div class="row">
+            <div class="column small-12">
+                <p tal:content="context/Description">We assess, plan, design and ...</p>
+            </div>
+        </div>
+    </div>
+</tal:check>
