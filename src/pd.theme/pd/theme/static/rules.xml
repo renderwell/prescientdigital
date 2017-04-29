@@ -37,14 +37,16 @@
             css:content="#pd-portal-globalnav" />
 
 
-        <!-- HOME PAGE -->
-        <replace css:theme="#panels"
-            css:content="#viewlet-below-content-body .panels" />
+        <!-- VIEWLETS CONTAINING PANELS -->
+        <replace css:theme="#viewlet-above-content-body"
+            css:content="#viewlet-above-content-body" />
+        <replace css:theme="#viewlet-below-content-body"
+            css:content="#viewlet-below-content-body" />
 
 
         <!-- INTERIOR PAGES -->
-        <replace css:theme-children="#content"
-            css:content-children="#content" />
+        <replace css:theme-children="#content-core"
+            css:content-children="#content-core" />
 
 
         <!-- LANDING PAGE BANNER AND DESCRIPTION -->
@@ -63,29 +65,58 @@
             <drop css:theme=".top-space" />
         </rules> -->
 
+        <!-- BANNER AND CALLOUT DESCRIPTION -->
         <replace css:theme="#top-banner"
             css:content="#top-banner" />
         <replace css:theme="#description-callout"
             css:content="#description-callout" />
 
 
+        <!-- HEADING AND DESCRIPTION -->
+        <replace css:theme="#documentFirstHeading"
+            css:content="#content > .documentFirstHeading" />
+        <replace css:theme="#documentDescription"
+            css:content="#content > .documentDescription" />
+
+
+        <!-- DROP HEADING, DESCRIPTION AND SIDE NAVIGATION COLUMN ON PAGES WITH A BANNER -->
+        <rules css:if-content="#top-banner">
+            <drop css:content="#content > .documentFirstHeading" />
+            <drop css:content="#content > .documentDescription" />
+            <drop css:theme="#with-nav" />
+        </rules>
+
+
+        <!-- HAVE SIDE NAVIGATION COLUMN ON PAGES WITHOUT A BANNER, IF ON A FOLDER -->
+        <rules css:if-not-content="#top-banner">
+            <rules css:if-content=".portletNavigationTree">
+                <drop css:theme="#without-nav" />
+            </rules>
+            <rules css:if-not-content=".portletNavigationTree">
+                <drop css:theme="#with-nav" />
+            </rules>
+        </rules>
+
+
         <!-- Drop right-hand column if no side nav -->
-        <rules css:if-not-content=".portletNavigationTree">
+        <!-- <rules css:if-not-content=".portletNavigationTree">
             <drop css:theme="#with-nav" />
         </rules>
         <rules css:if-content=".portletNavigationTree">
             <drop css:theme="#without-nav" />
-        </rules>
+        </rules> -->
 
 
         <!-- SIDE NAV -->
-        <replace css:theme-children=".portletNavigationTree"
+        <replace css:theme-children="#side-nav"
             css:content-children=".portletNavigationTree" />
 
-        <replace css:theme="#top-banner"
-            css:content="#top-banner" />
+
+        <!-- FROM ORIGINAL - DROP DOCUMENT ACTIONS -->
+        <drop css:content=".documentActions" />
 
 
+        <!-- REFERENCE -->
         <!--
         <replace css:theme=".replace-people-nav"
             css:content-children="#intranet_inner" />

@@ -32,6 +32,14 @@
      permission="zope2.View"
      />
 
+  <browser:viewlet
+     name="pd_marker_viewlet"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".markerviewlet.MarkerViewlet"
+     template="bannerimage.pt"
+     permission="zope2.View"
+     />
+
   <browser:resourceDirectory
     name="pd.theme.css"
     directory="css"

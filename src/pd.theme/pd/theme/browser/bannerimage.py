@@ -10,14 +10,25 @@ from plone.app.layout.navigation.defaultpage import isDefaultPage
 class BannerImage(ViewletBase):
     render = ViewPageTemplateFile('bannerimage.pt')
 
-    def banner_image_url(self):
-        return '%s/banner-image/image' % context.absolute_url()
+    def default_page(self):
+        return isDefaultPage(self.context.aq_parent, self.context)
+
+    def banner_style(self):
+        context = self.context
+        folder = self.default_page() and context.aq_parent or context
+        brains = folder.getFolderContents({'portal_type': 'BannerImage'})
+        banner_image = len(brains) > 0 and brains[0] or None
+
+        banner_style = ""
+        if banner_image:
+            banner_style = 'background-image: url(%s/image)' % banner_image.getURL()
+
+        return banner_style
 
     def show(self):
-        default_page = isDefaultPage(self.context.aq_parent, self.context)
         path_length = len(self.context.getPhysicalPath())
 
-        if default_page and path_length == 4:
+        if self.default_page() and path_length == 4:
             return True
         elif path_length == 3:
             return True

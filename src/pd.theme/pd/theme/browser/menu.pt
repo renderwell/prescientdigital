@@ -1,4 +1,6 @@
-<ul id="pd-portal-globalnav" class="vertical large-horizontal menu" data-responsive-menu="drilldown large-dropdown">
+<ul id="pd-portal-globalnav"
+    class="vertical large-horizontal menu"
+    data-responsive-menu="drilldown large-dropdown">
     <tal:list repeat="itemdict view/getMenu">
       <li tal:attributes="class python:
 			  (itemdict['currentItem'] or itemdict['currentParent'])
@@ -14,12 +16,8 @@
                 <span tal:content="item/Title" />
             </a>
         </li>
-	  <tal:sublist
-	     repeat="child itemdict/children">
-	     <li tal:attributes="class python:
-				 (child['currentItem']
-				 or child['currentParent'])
-				 and 'selected is-submenu-item is-dropdown-submenu-item' or 'normal is-submenu-item is-dropdown-submenu-item'">
+	  <tal:sublist repeat="child itemdict/children">
+	     <li tal:attributes="class python:(child['currentItem'] or child['currentParent']) and 'selected is-submenu-item is-dropdown-submenu-item' or 'normal is-submenu-item is-dropdown-submenu-item'">
 	       <a tal:content="child/item/Title"
 		  tal:attributes="href child/item/getURL" />
 	     </li>
@@ -27,4 +25,4 @@
 	</ul>
       </li>
     </tal:list>
-  </ul>
+</ul>

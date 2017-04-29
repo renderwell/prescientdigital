@@ -1,3 +1,25 @@
+/*BANNER*/
 .banner {
     background-image: url(++theme++pd.theme/assets/img/about_us.jpg);
+}
+
+/*SIDE NAV STICKY*/
+#side-nav.is-stuck {
+    padding-top: 90px;
+    z-index: 4;
+}
+
+/*DROP-DOWN MENUS*/
+@media print, screen and (min-width: 64em) {
+.is-dropdown-submenu {
+    min-width: 690px;
+}
+
+.menu li li {
+    float: left;
+}
+
+.is-dropdown-submenu > li {
+    width: 50%;
+}
 }

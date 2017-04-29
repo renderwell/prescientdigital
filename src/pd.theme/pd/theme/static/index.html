@@ -63,33 +63,45 @@
 
 <div id="top-space" class="v-space-2"></div>
 
+<div id="viewlet-above-content-body"></div>
+
 <div id="with-nav" class="v-space-2">
     <div class="row" data-equalizer>
-        <div class="column medium-9">
-            <div class="pageContent" id="content">
-                CONTENT
+        <div class="column medium-3" data-sticky-container>
+            <div id="side-nav" data-sticky data-anchor="content-core">
+                SIDE NAV
             </div>
         </div>
 
-        <div class="column medium-3" data-sticky-container>
-            <dl class="portlet portletNavigationTree" data-sticky data-anchor="content">
-                SIDE NAV
-            </dl>
+        <div class="column medium-9">
+            <div id="documentFirstHeading"></div>
+
+            <div id="documentDescription"></div>
+
+            <div class="pageContent" id="content-core">
+                CONTENT
+            </div>
         </div>
     </div>
 </div>
 
 <div id="without-nav" class="v-space-2">
     <div class="row" data-equalizer>
+        <div id="documentFirstHeading"></div>
+
+        <div id="documentDescription"></div>
+
         <div class="column">
-            <div class="pageContent" id="content">
+            <div class="pageContent" id="content-core">
                 CONTENT
             </div>
         </div>
     </div>
 </div>
 
-<div class="v-space-3"></div>
+<div id="viewlet-below-content-body"></div>
+
+<div id="content-bottom-space" class="v-space-3"></div>
 
 <section class="feature-carousel-section">
     <div class="row">
@@ -246,11 +258,10 @@
 
     testimonial_slider.setup("testimonial-slider", {
         width:1000,
-        height:320,
+        // height:320,
         centerControls:false,
         space:0,
         layout:"fillwidth",
-        // autoHeight:true,
         autoHeight:true,
         loop:true,
         autoplay:true

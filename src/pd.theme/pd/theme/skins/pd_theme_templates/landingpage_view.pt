@@ -12,15 +12,6 @@
          <tal:main-macro metal:define-macro="main"
               tal:define="text python: here.CookedBody(stx_level=2)">
 
-         <!--a href=""
-            class="link-parent"
-            tal:define="parent_url python:here.navigationParent(here, template_id)"
-            tal:condition="parent_url"
-            tal:attributes="href parent_url"
-            i18n:translate="go_to_parent_url">
-            Up one level
-         </a-->
-
          <h1 class="documentFirstHeading"
             tal:content="here/Title"
             tal:condition="here/Title">
@@ -33,6 +24,7 @@
             Description
          </p>
 
+         <div id="content-core">
          <p tal:condition="python: not text and is_editable"
             i18n:translate="no_body_text"
             class="discreet">
@@ -43,7 +35,7 @@
               tal:condition="text"
               tal:attributes="class python:test(here.Format() in ('text/structured',
                                                     'text/x-rst', ), 'stx', 'plain')">
-             <div tal:replace="structure text" />
+             <div tal:replace="structure text"></div>
          </div>
 
          <tal:block condition="here/listTitles">
@@ -93,6 +85,7 @@
 
               </tal:block>
          </tal:entry>
+        </div>
 
          </tal:main-macro>
     </metal:main>

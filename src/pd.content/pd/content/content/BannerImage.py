@@ -58,7 +58,7 @@ class BannerImage(BaseContent, BrowserDefaultMixin):
 
     schema = BannerImage_schema
 
-    # Methods
-
+    def exclude_from_nav(self):
+        return True
 
 registerType(BannerImage, PROJECTNAME)

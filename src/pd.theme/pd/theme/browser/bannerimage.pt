@@ -1,9 +1,6 @@
 <tal:check condition="view/show">
-    <!-- <div id="top-banner" class="banner"
-        tal:attributes="style string:background-image:url(${context/absolute_url}/banner-image/image)"> -->
-    <!-- <div id="top-banner" class="banner"
-        tal:attributes="style string:background-image:url(view/banner_image_url)"> -->
-    <div id="top-banner" class="banner">
+    <div id="top-banner" class="banner"
+         tal:attributes="style view/banner_style">
         <div class="banner__scrim">
             <h1 tal:content="context/Title">About us</h1>
         </div>

@@ -12,15 +12,6 @@
          <tal:main-macro metal:define-macro="main"
               tal:define="text python: here.CookedBody(stx_level=2)">
 
-         <!--a href=""
-            class="link-parent"
-            tal:define="parent_url python:here.navigationParent(here, template_id)"
-            tal:condition="parent_url"
-            tal:attributes="href parent_url"
-            i18n:translate="go_to_parent_url">
-            Up one level
-         </a-->
-
          <h1 class="documentFirstHeading"
             tal:content="here/Title"
             tal:condition="here/Title">
@@ -33,101 +24,47 @@
             Description
          </p>
 
-         <p tal:condition="python: not text and is_editable"
-            i18n:translate="no_body_text"
-            class="discreet">
-            This item does not have any body text, click the edit tab to change it.
-         </p>
+         <div id="content-core">
+             <p tal:condition="python: not text and is_editable"
+                i18n:translate="no_body_text"
+                class="discreet">
+                This item does not have any body text, click the edit tab to change it.
+             </p>
 
-         <div class="stx"
-              tal:condition="text"
-              tal:attributes="class python:test(here.Format() in ('text/structured',
-                                                    'text/x-rst', ), 'stx', 'plain')">
-             <div tal:replace="structure text" />
-         </div>
+             <div class="stx"
+                  tal:condition="text"
+                  tal:attributes="class python:test(here.Format() in ('text/structured',
+                                                        'text/x-rst', ), 'stx', 'plain')">
+                 <div tal:replace="structure text"></div>
+             </div>
 
-         <!--tal:block condition="here/listTitles">
-              <h3 i18n:translate="faq_overview">Page overview</h3>
-              <ul tal:define="more_url more_url|request/more_url|string:folder_contents">
-                  <li tal:repeat="item blocks">
-                      <tal:block define="item_id item/getId|item/id">
-                           <a tal:attributes="href python:test(here.getDisplayTextBlocks(), '#'+item_id, item_id)"
-                              tal:content="item/getTitle">
-                              Just a random text block
-                           </a>
-                      </tal:block>
-                  </li>
-              </ul>
-         </tal:block-->
-
-         <table width="100%" cellpadding="0" cellspacing="0" tal:condition="blocks">
-            <tr tal:repeat="item blocks" valign="top">
-                <div tal:condition="repeat/item/even">
-                     <td width="49%" class="LandingBlocksCell">
-                         <div class="landingTitle" tal:content="item/getTitle">block title</div>
-                         <hr>
-                         <div class="landingBody" tal:content="structure item/getTextBlock">body text</div>
-                     </td>
-                     <tal:block condition="repeat/item/end">
-                         <td width="2%"></td>
-                         <td width="49%"></td>
-                     </tal:block>
-                     <tal:block condition="not: repeat/item/end">
-                         <td width="2%"></td>
-                         <td width="49%" class="LandingBlocksCell"
-                             tal:define="n repeat/item/index;
-                                         next python: blocks[n+1]">
-                             <div class="landingTitle" tal:content="next/getTitle">block title</div>
+             <table width="100%" cellpadding="0" cellspacing="0" tal:condition="blocks">
+                <tr tal:repeat="item blocks" valign="top">
+                    <div tal:condition="repeat/item/even">
+                         <td width="49%" class="LandingBlocksCell">
+                             <div class="landingTitle" tal:content="item/getTitle">block title</div>
                              <hr>
-                             <div class="landingBody" tal:content="structure next/getTextBlock">body text</div>
+                             <div class="landingBody" tal:content="structure item/getTextBlock">body text</div>
                          </td>
-                     </tal:block>
-                </div>
-            </tr>
-         </table>
-
-         <!--tal:entry condition="here/getDisplayTextBlocks" repeat="item blocks">
-              <tal:block define="item_id        item/getId|item/id;
-                                 block          item/getTitle;
-                                 itemIsEditable python:checkPermission('Modify portal content', item);">
-
-                   <tal:block condition="itemIsEditable">
-                        <h3 class="landingHeader" tal:attributes="id item_id">
-                            <a tal:attributes="href item_id" tal:content="block">
-                               Just a random text block
-                            </a>
-                            <a i18n:attributes="title"
-                               i18n:translate="faq_edit_entry"
-                               title="Edit this text block"
-                               tal:attributes="href string:${item_id}/edit">(edit)
-                            </a>
-                        </h3>
-                   </tal:block>
-
-                   <tal:block condition="not: itemIsEditable">
-                        <h3 class="landingHeader" tal:attributes="id item_id" tal:content="block">
-                            Just a random text block
-                        </h3>
-                   </tal:block>
-
-                   <span class="landingBody" tal:content="structure item/getTextBlock">
-                         The notes blatted skyward as they rose over the Canada geese, feathered
-                         rumps mooning the day, webbed appendages frantically pedaling unseen
-                         bicycles in their search for sustenance, driven by cruel Nature's maxim,
-                         'Ya wanna eat, ya gotta work,' and at last I knew Pittsburgh.
-                   </span>
-
-                   <tal:block define="here nocall:item">
-                        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-                             show related items if they exist
-                        </div>
-                   </tal:block>
-
-              </tal:block>
-         </tal:entry-->
-
+                         <tal:block condition="repeat/item/end">
+                             <td width="2%"></td>
+                             <td width="49%"></td>
+                         </tal:block>
+                         <tal:block condition="not: repeat/item/end">
+                             <td width="2%"></td>
+                             <td width="49%" class="LandingBlocksCell"
+                                 tal:define="n repeat/item/index;
+                                             next python: blocks[n+1]">
+                                 <div class="landingTitle" tal:content="next/getTitle">block title</div>
+                                 <hr>
+                                 <div class="landingBody" tal:content="structure next/getTextBlock">body text</div>
+                             </td>
+                         </tal:block>
+                    </div>
+                </tr>
+             </table>
+         </div>
          </tal:main-macro>
     </metal:main>
-
   </body>
 </html>
