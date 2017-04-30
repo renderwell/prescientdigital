@@ -19,4 +19,6 @@
     meta_type="Factory-based Type Information with dynamic views" />
   <object name="BannerImage"
     meta_type="Factory-based Type Information with dynamic views" />
+  <object name="FeatureCarouselImages"
+    meta_type="Factory-based Type Information with dynamic views" />
 </object>

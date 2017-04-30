@@ -1,0 +1,24 @@
+<tal:featurecarousel define="items view/items">
+    <section id="feature-carousel" class="feature-carousel-section">
+        <div class="row">
+            <div class="column small-12">
+                <h3 class="section-header v-space-2">In this section</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="feature-carousel" data-equalizer>
+                <a class="feature-carousel__item" data-equalizer-watch
+                    tal:repeat="item items"
+                    tal:attributes="href item/url">
+                    <img tal:attributes="src item/image;
+                                         alt item/title" />
+                    <div class="text">
+                        <h4 tal:content="item/title"></h4>
+                        <p tal:content="item/description"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</tal:featurecarousel>

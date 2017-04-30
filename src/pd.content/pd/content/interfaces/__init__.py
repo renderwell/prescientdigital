@@ -4,3 +4,4 @@ from Testimonial import ITestimonial
 from CaseStudyFolder import ICaseStudyFolder
 from CaseStudy import ICaseStudy
 from BannerImage import IBannerImage
+from FeatureCarouselImages import IFeatureCarouselImages 

@@ -112,6 +112,11 @@
             css:content-children=".portletNavigationTree" />
 
 
+        <!-- FEATURE CAROUSEL - CONTAINS SUB-NAVIGATION     -->
+        <replace css:theme="#feature-carousel"
+            css:content="#feature-carousel" />
+
+
         <!-- FROM ORIGINAL - DROP DOCUMENT ACTIONS -->
         <drop css:content=".documentActions" />
 

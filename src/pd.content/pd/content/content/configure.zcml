@@ -47,4 +47,11 @@
         />
   </class>
 
+  <class class=".FeatureCarouselImages.FeatureCarouselImages">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IFeatureCarouselImages"
+        />
+  </class>
+
 </configure>
