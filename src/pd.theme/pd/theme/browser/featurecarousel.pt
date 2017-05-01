@@ -1,5 +1,6 @@
 <tal:featurecarousel define="items view/items">
-    <section id="feature-carousel" class="feature-carousel-section">
+    <section id="feature-carousel" class="feature-carousel-section"
+             tal:condition="items">
         <div class="row">
             <div class="column small-12">
                 <h3 class="section-header v-space-2">In this section</h3>

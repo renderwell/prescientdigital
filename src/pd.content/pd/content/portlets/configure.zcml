@@ -29,4 +29,15 @@
      editview=".casestudyportlet.EditForm"
      />
 
+  <plone:portlet
+     name="parallax_portlet"
+     interface=".parallaxportlet.IParallaxPortlet"
+     assignment=".parallaxportlet.Assignment"
+     view_permission="zope2.View"
+     edit_permission="cmf.ManagePortal"
+     renderer=".parallaxportlet.Renderer"
+     addview=".parallaxportlet.AddForm"
+     editview=".parallaxportlet.EditForm"
+     />
+
 </configure>

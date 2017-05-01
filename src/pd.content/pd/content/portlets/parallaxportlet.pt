@@ -1,0 +1,13 @@
+<tal:parallaxportlet define="center_text view/data/center_text">
+<div id="stats-counter"
+     tal:attributes="
+        class python:center_text and 'parallax v-space-2 center-text' or 'parallax v-space-2';
+        style view/data/portlet_style"
+     data-0="background-position:50% 0px;" data-1500="background-position:50% -500px;">
+    <div class="parallax-bg">
+        <div class="parallax-center">
+             <span tal:replace="structure view/data/text" />
+        </div>
+    </div>
+</div>
+</tal:parallaxportlet>
