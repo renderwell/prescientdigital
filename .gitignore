@@ -1,2 +1,6 @@
-var/
-omelette/
+var
+omelette
+bin
+develop-eggs
+eggs
+parts
