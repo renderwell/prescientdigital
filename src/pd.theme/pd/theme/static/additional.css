@@ -60,7 +60,7 @@
 
 /*DROP-DOWN MENUS*/
 @media print, screen and (min-width: 64em) {
-.is-dropdown-submenu {
+/*.is-dropdown-submenu {
     min-width: 690px;
 }
 
@@ -70,6 +70,22 @@
 
 .is-dropdown-submenu > li {
     width: 50%;
+}
+
+.is-dropdown-submenu {
+    min-width: 690px;
+}*/
+
+.menu li.max li {
+    float: left;
+}
+
+li.max .is-dropdown-submenu > li {
+    width: 50%;
+}
+
+li.max .is-dropdown-submenu {
+    min-width: 690px;
 }
 }
 
