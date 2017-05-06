@@ -1,28 +1,54 @@
+<!--
+<tal:check define="menu view/getMenu">
+    <tal:items repeat="itemdict menu">
+        <span tal:replace="itemdict/item/Title" />: <span tal:replace="itemdict/item/getURL" />
+        <br />
+        <tal:items repeat="child itemdict/children">
+            ---<span tal:replace="child/item/Title" />: <span tal:replace="child/item/getURL" /><br />
+            <tal:items repeat="subchild child/children">
+                ------<span tal:replace="subchild/item/Title" />: <span tal:replace="subchild/item/getURL" /><br />
+            </tal:items>
+        </tal:items>
+        <br />
+        <br />
+    </tal:items>
+    <br />
+</tal:check>
+<br />
+<br />
+-->
+
 <ul id="pd-portal-globalnav"
-    class="vertical large-horizontal menu"
+    class="vertical large-horizontal menu navlevel0"
     data-responsive-menu="drilldown large-dropdown">
     <tal:list repeat="itemdict view/getMenu">
-      <li tal:attributes="class python:
-			  (itemdict['currentItem'] or itemdict['currentParent'])
-			  and 'selected' or 'normal'"
+      <li tal:attributes="class python:(itemdict['currentItem'] or itemdict['currentParent']) and 'selected' or 'normal'"
 	  tal:define="item itemdict/item">
-	<a tal:attributes="href item/getURL">
-        <span tal:content="item/Title" />
-    </a>
-	<ul tal:condition="exists:itemdict/children"
-              class="vertical menu">
-        <li class="top-section is-submenu-item is-dropdown-submenu-item" role="menuitem">
-        	<a tal:attributes="href item/getURL">
-                <span tal:content="item/Title" />
-            </a>
-        </li>
-	  <tal:sublist repeat="child itemdict/children">
-	     <li tal:attributes="class python:(child['currentItem'] or child['currentParent']) and 'selected is-submenu-item is-dropdown-submenu-item' or 'normal is-submenu-item is-dropdown-submenu-item'">
-	       <a tal:content="child/item/Title"
-		  tal:attributes="href child/item/getURL" />
-	     </li>
-	  </tal:sublist>
-	</ul>
+    	<a tal:attributes="href item/getURL">
+            <span tal:content="item/Title" />
+        </a>
+    	<ul tal:condition="exists:itemdict/children"
+                  class="menu navlevel1">
+            <li class="top-section is-submenu-item is-dropdown-submenu-item" role="menuitem">
+            	<a tal:attributes="href item/getURL">
+                    <span tal:content="item/Title" />
+                </a>
+            </li>
+            <tal:sublist repeat="child itemdict/children">
+             <li tal:attributes="class python:(child['currentItem'] or child['currentParent']) and 'selected is-submenu-item is-dropdown-submenu-item' or 'normal is-submenu-item is-dropdown-submenu-item'">
+               <a tal:content="child/item/Title"
+                  tal:attributes="href child/item/getURL"></a>
+                <ul class="menu navlevel2"
+    	            tal:condition="exists:child/children">
+                    <li tal:repeat="subchild child/children">
+                    	<a tal:attributes="href subchild/item/getURL"
+                           tal:content="subchild/item/Title">
+                        </a>
+                    </li>
+                </ul>
+             </li>
+            </tal:sublist>
+    	</ul>
       </li>
     </tal:list>
 </ul>
