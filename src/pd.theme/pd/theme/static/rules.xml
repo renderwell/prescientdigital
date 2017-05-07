@@ -30,6 +30,11 @@
             css:content="title" />
 
 
+        <!-- SITE SEARCH     -->
+        <replace css:theme="#portal-searchbox"
+            css:content="#portal-searchbox" />
+
+
         <!-- TOP NAVIGATION -->
         <replace css:theme="#top-nav-off-canvas"
             css:content="#pd-portal-globalnav" />

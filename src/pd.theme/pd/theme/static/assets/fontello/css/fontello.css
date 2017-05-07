@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('/++theme++pd.theme/assets/fontello/font/fontello.eot?4876810');
-  src: url('/++theme++pd.theme/assets/fontello/font/fontello.eot?4876810#iefix') format('embedded-opentype'),
-       url('/++theme++pd.theme/assets/fontello/font/fontello.woff2?4876810') format('woff2'),
-       url('/++theme++pd.theme/assets/fontello/font/fontello.woff?4876810') format('woff'),
-       url('/++theme++pd.theme/assets/fontello/font/fontello.ttf?4876810') format('truetype'),
-       url('/++theme++pd.theme/assets/fontello/font/fontello.svg?4876810#fontello') format('svg');
+  src: url('/++theme++pd.theme/assets/fontello/font/fontello.eot?55903421');
+  src: url('/++theme++pd.theme/assets/fontello/font/fontello.eot?55903421#iefix') format('embedded-opentype'),
+       url('/++theme++pd.theme/assets/fontello/font/fontello.woff2?55903421') format('woff2'),
+       url('/++theme++pd.theme/assets/fontello/font/fontello.woff?55903421') format('woff'),
+       url('/++theme++pd.theme/assets/fontello/font/fontello.ttf?55903421') format('truetype'),
+       url('/++theme++pd.theme/assets/fontello/font/fontello.svg?55903421#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?4876810#fontello') format('svg');
+    src: url('../font/fontello.svg?55903421#fontello') format('svg');
   }
 }
 */
@@ -58,6 +58,14 @@
 .icon-volume:before { content: '\e800'; } /* '' */
 .icon-left-open:before { content: '\e801'; } /* '' */
 .icon-right-open:before { content: '\e802'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
 .icon-search:before { content: '\e804'; } /* '' */
+.icon-ok:before { content: '\e805'; } /* '' */
 .icon-doc-text-1:before { content: '\e83e'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-gplus:before { content: '\f0d5'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
 .icon-desktop:before { content: '\f108'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
+.icon-slideshare:before { content: '\f1e7'; } /* '' */

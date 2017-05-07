@@ -1,4 +1,7 @@
 
-#pd-portal-globalnav {
+#pd-portal-globalnav,
+#top-banner,
+#description-callout
+{
     display: none;
 }
