@@ -46,4 +46,22 @@ h5, h6 {
 }
 }
 
+.center-text .parallax-center {
+    width: 80%;
+    font-size: 18px
+}
+
+@media print, screen and (min-width: 40em) {
+.center-text .parallax-center {
+    width: 70%;
+    font-size: 24px
+}
+}
+
+@media print, screen and (min-width: 64em) {
+.center-text .parallax-center {
+    width: 50%;
+}
+}
+
 /*PLONE GENERATED CONTENT*/
