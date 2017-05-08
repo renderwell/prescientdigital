@@ -11,124 +11,39 @@ body {
 }
 }*/
 
-/*BANNER*/
-.banner {
-    background-image: url(++theme++pd.theme/assets/img/about_us.jpg);
+/*GENERAL*/
+h5, h6 {
+    margin-bottom: 0.5rem;
 }
 
-/*TOP NAV*/
-@media print, screen and (min-width: 64em) {
-.navlevel2.is-dropdown-submenu.js-dropdown-active {
-    display: none !important;
-}
+.site-logo img {
+    width: 75%;
 }
 
-/*SIDE NAV*/
-/*#side-nav.is-stuck {
-    padding-top: 120px;
-    z-index: 4;
-}*/
-
-.left-hand-column {
-    display: none;
-}
-
-@media print, screen and (min-width: 64em) {
-.left-hand-column {
-    display: block;
+@media print, screen and (min-width: 40em) {
+.site-logo img {
+    width: 100%;
 }
 }
 
-#side-nav.is-stuck {
-    display: none;
+.counter {
+    font-size: 40px;
+}
+
+@media print, screen and (min-width: 40em) {
+.counter {
+    font-size: 60px;
+}
+}
+
+.grid-gallery-item__text {
+    font-size: 14px;
 }
 
 @media print, screen and (min-width: 64em) {
-#side-nav.is-stuck {
-    display: block;
-    padding-top: 120px;
-    z-index: 4;
-}
-}
-
-.side-nav {
-    padding-top: 0;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+.grid-gallery-item__text {
     font-size: 16px;
 }
-
-@media print, screen and (min-width: 64em) {
-.side-nav {
-    padding-top: 15px;
-}
 }
 
-.navTreeItem {
-    display: inline-block;
-}
-
-.navTreeItem a {
-    display: block;
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid #1c6797;
-    line-height: 1em;
-}
-
-@media print, screen and (min-width: 64em) {
-.navTreeItem {
-    display: block;
-}
-
-.navTreeItem a {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: 0;
-    line-height: 1.4em;
-}
-}
-
-/*DROP-DOWN MENUS*/
-@media print, screen and (min-width: 64em) {
-/*.is-dropdown-submenu {
-    min-width: 690px;
-}
-
-.menu li li {
-    float: left;
-}
-
-.is-dropdown-submenu > li {
-    width: 50%;
-}
-
-.is-dropdown-submenu {
-    min-width: 690px;
-}*/
-
-.menu li.max li {
-    float: left;
-}
-
-li.max .is-dropdown-submenu > li {
-    width: 50%;
-}
-
-li.max .is-dropdown-submenu {
-    min-width: 690px;
-}
-}
-
-/*PARALLAX PORTLET*/
-.center-text .parallax-center {
-    width: 50%;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
-    font-size: 24px;
-}
-
-/*TESTIMONIAL SLIDER*/
-@media print, screen and (min-width: 40em) {
-.testimonial-slider p {
-    font-size: 1.4em;
-}
-}
+/*PLONE GENERATED CONTENT*/
