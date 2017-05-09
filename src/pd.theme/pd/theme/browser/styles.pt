@@ -1,0 +1,6 @@
+<tal:styles define="show view/show;
+                    styles view/get_styles">
+    <style id="style-modifications"
+        tal:condition="python:show and styles"
+        tal:content="structure styles"></style>
+</tal:styles>

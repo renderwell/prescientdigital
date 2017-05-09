@@ -58,6 +58,14 @@
      permission="zope2.View"
      />
 
+  <browser:viewlet
+     name="pd_styles"
+     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+     class=".styles.StylesViewlet"
+     template="styles.pt"
+     permission="zope2.View"
+     />
+
   <browser:resourceDirectory
     name="pd.theme.css"
     directory="css"

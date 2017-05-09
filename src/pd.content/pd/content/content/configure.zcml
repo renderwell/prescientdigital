@@ -54,4 +54,11 @@
         />
   </class>
 
+  <class class=".Styles.Styles">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IStyles"
+        />
+  </class>
+
 </configure>

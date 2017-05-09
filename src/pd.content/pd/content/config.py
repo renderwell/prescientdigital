@@ -11,4 +11,5 @@ ADD_PERMISSIONS = {
     'CaseStudy': 'pd.content: Add CaseStudy',
     'BannerImage': 'pd.content: Add BannerImage',
     'FeatureCarouselImages': 'pd.content: Add FeatureCarouselImages',
+    'Styles': 'pd.content: Add Styles',
 }

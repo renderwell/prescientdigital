@@ -16,5 +16,6 @@
     <type portal_type="CaseStudy" />
     <type portal_type="BannerImage" />
     <type portal_type="FeatureCarouselImages" />
+    <type portal_type="Styles" />
   </factorytypes>
 </object>

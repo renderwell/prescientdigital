@@ -30,6 +30,10 @@
             css:content="title" />
 
 
+        <replace css:theme="#style-modifications"
+            css:content="#style-modifications" />
+
+
         <!-- SITE SEARCH     -->
         <replace css:theme="#portal-searchbox"
             css:content="#portal-searchbox" />
