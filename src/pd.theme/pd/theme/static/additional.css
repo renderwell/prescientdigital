@@ -65,3 +65,31 @@ h5, h6 {
 }
 
 /*PLONE GENERATED CONTENT*/
+
+.site-footer #addForm #inputProp0 {
+    width: 66.6666%;
+    float: left;
+}
+
+.site-footer #addForm .btn-primary {
+    background-color: #2178b0;
+    color: #fefefe;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.callout {
+    clear: both;
+    font-family: "Montserrat";
+    font-size: 1.4em;
+    padding: 0.5em 0.6em;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+    line-height: 1.4em;
+}
+
+.navTreeItem img {
+    display: none;
+}

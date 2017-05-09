@@ -30,6 +30,7 @@
             css:content="title" />
 
 
+        <!-- STYLING -->
         <replace css:theme="#style-modifications"
             css:content="#style-modifications" />
 
@@ -58,21 +59,12 @@
             css:content-children="#content-core" />
 
 
-        <!-- LANDING PAGE BANNER AND DESCRIPTION -->
-        <!-- <rules css:if-not-content=".portaltype-landingpage, .portaltype-document">
-            <drop css:theme="#top-banner" />
-            <drop css:theme="#description-callout" />
+        <!-- CONTACT FORM - Needs to be more robust! -->
+        <rules css:if-content=".subsection-questions-comments-feedback">
+            <replace css:theme="#content-core"
+                css:content="#content > div" />
         </rules>
 
-        <rules css:if-content=".portaltype-landingpage, .portaltype-document">
-            <replace css:theme="#top-banner h1"
-                css:content=".documentFirstHeading" method="raw"/>
-            <replace css:theme="#description-callout p"
-                css:content="#content > .documentDescription" method="raw" />
-            <drop css:content=".documentFirstHeading" />
-            <drop css:content=".documentDescription" />
-            <drop css:theme=".top-space" />
-        </rules> -->
 
         <!-- BANNER AND CALLOUT DESCRIPTION -->
         <replace css:theme="#top-banner"
@@ -88,32 +80,32 @@
             css:content="#content > .documentDescription" />
 
 
-        <!-- DROP HEADING, DESCRIPTION AND SIDE NAVIGATION COLUMN ON PAGES WITH A BANNER -->
+        <!-- DROP HEADING AND DESCRIPTION ON PAGES WITH A BANNER -->
         <rules css:if-content="#top-banner">
             <drop css:content="#content > .documentFirstHeading" />
             <drop css:content="#content > .documentDescription" />
+        </rules>
+
+
+        <!-- DROP SIDE NAVIGATION IF ON A TOP SECTION OR IF ON A SECOND LEVEL
+             AND NOT ON A FOLDER -->
+        <rules css:if-content="#drop-sidenav">
             <drop css:theme="#with-nav" />
         </rules>
 
 
-        <!-- HAVE SIDE NAVIGATION COLUMN ON PAGES WITHOUT A BANNER, IF ON A FOLDER -->
-        <rules css:if-not-content="#top-banner">
+        <!-- HAVE SIDE NAVIGATION AND BOTTOM "IN THIS SECTION" CAROUSEL ON
+             PAGES ON THE SECOND LEVEL OR LOWER, AND IF ON A FOLDER AND
+             THERE IS NAVIGATION -->
+        <rules css:if-not-content="#drop-sidenav">
             <rules css:if-content=".portletNavigationTree">
                 <drop css:theme="#without-nav" />
             </rules>
             <rules css:if-not-content=".portletNavigationTree">
                 <drop css:theme="#with-nav" />
+                <drop css:theme="#feature-carousel" />
             </rules>
         </rules>
-
-
-        <!-- Drop right-hand column if no side nav -->
-        <!-- <rules css:if-not-content=".portletNavigationTree">
-            <drop css:theme="#with-nav" />
-        </rules>
-        <rules css:if-content=".portletNavigationTree">
-            <drop css:theme="#without-nav" />
-        </rules> -->
 
 
         <!-- SIDE NAV -->
@@ -126,39 +118,13 @@
             css:content="#feature-carousel" />
 
 
+        <!-- FOOTER SUBSCRIBE FORM -->
+        <replace css:theme="#pd-subscribe"
+            css:content=".subscribePortlet #addForm" />
+
+
         <!-- FROM ORIGINAL - DROP DOCUMENT ACTIONS -->
         <drop css:content=".documentActions" />
 
-
-        <!-- REFERENCE -->
-        <!--
-        <replace css:theme=".replace-people-nav"
-            css:content-children="#intranet_inner" />
-
-        <replace css:theme=".replace-site-search"
-            css:content="#portal-searchbox form" />
-
-        <replace css:theme-children=".diazo-left-column"
-                 css:content-children="#portal-column-one" />
-
-        <append css:theme="main"
-                 css:content="#portal-column-content" />
-
-        <rules css:if-not-content=".template-compose">
-            <drop css:content=".hero" />
-            <replace css:theme="#hero-placeholder"
-                css:content=".hero"
-                method="raw"/>
-        </rules>
-        <rules css:if-not-content=".hero">
-            <drop css:theme="#hero-placeholder" />
-        </rules>
-
-        <replace css:theme-children="aside"
-                 css:content-children="#portal-column-two" />
-
-        <replace css:theme-children="footer .footer-social"
-                 css:content-children="#social-media-icons" />
-        -->
     </rules>
 </rules>

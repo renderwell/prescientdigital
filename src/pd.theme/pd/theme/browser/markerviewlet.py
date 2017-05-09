@@ -12,17 +12,25 @@ class MarkerViewlet(ViewletBase):
         return isDefaultPage(self.context.aq_parent, self.context)
 
     def top_section(self):
-        default_page = self.default_page()
         path_length = len(self.context.getPhysicalPath())
 
-        if default_page and path_length == 4:
+        if self.default_page() and path_length == 4:
             return True
         elif path_length == 3:
             return True
 
-    def full_width(self):
-        context = self.context
-        folder = self.default_page() and context.aq_parent or context
-        import pdb; pdb.set_trace()
-        x=1
-        return
+    def second_level(self):
+        path_length = len(self.context.getPhysicalPath())
+
+        if self.default_page() and path_length == 5:
+            return True
+        elif path_length == 4:
+            return True
+
+    def is_folder(self):
+        if self.default_page() or self.context.isPrincipiaFolderish:
+            return True
+
+    def drop_sidenav(self):
+        if self.top_section() or (self.second_level() and not self.is_folder()):
+            return True
