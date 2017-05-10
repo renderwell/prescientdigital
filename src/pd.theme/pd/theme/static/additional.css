@@ -106,7 +106,7 @@ h2.tileHeadline {
     margin-bottom: 0.3em;
 }
 
-div[id^="parent-fieldname-text-"] img {
+div[id^="parent-fieldname-text-"] table img {
     max-width: none;
 }
 
