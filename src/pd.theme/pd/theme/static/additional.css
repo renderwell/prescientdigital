@@ -144,11 +144,7 @@ input.searchPage[type="text"] {
     padding: 0 0.5rem;
 }
 
-input.searchPage[type="submit"] {
-
-}
-
-.searchform h1.documentFirstHeading {
+.searchPage h1.documentFirstHeading {
     font-size: 2.5rem;
 }
 
