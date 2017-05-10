@@ -106,6 +106,52 @@ h2.tileHeadline {
     margin-bottom: 0.3em;
 }
 
+div[id^="parent-fieldname-text-"] img {
+    max-width: none;
+}
+
+input[type="submit"] {
+    background-color: #2178b0;
+    color: #fefefe;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 1.5rem 0.5rem;
+}
+
+/*PLONE GENERATED CONTENT: Forms*/
+fieldset#search-field {
+    border: none!important;
+    text-align: center;
+}
+
+fieldset {
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+}
+
+input.searchPage[type="text"] {
+    font-size: 150% !important;
+    width: auto;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 0.5rem;
+}
+
+input.searchPage[type="submit"] {
+
+}
+
+.searchform h1.documentFirstHeading {
+    font-size: 2.5rem;
+}
+
 /*PLONE GENERATED CONTENT: Table Classes*/
 #content table {
     margin-bottom: 1em;
