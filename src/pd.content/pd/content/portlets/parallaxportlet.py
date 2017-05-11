@@ -11,6 +11,7 @@ from plone.app.vocabularies.catalog import SearchableTextSourceBinder
 from plone.app.form.widgets.wysiwygwidget import WYSIWYGWidget
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from Products.ATContentTypes.interface import IATImage
+import plone.api
 
 try:
     from plone.namedfile.interfaces import IImageScaleTraversable
@@ -92,18 +93,66 @@ class Renderer(base.Renderer):
             image_path = image_path[1:]
         image = self.portal.restrictedTraverse(image_path, default=None)
 
-        if IImageScaleTraversable and IImageScaleTraversable.providedBy(image):
-            try:
-                view = image.restrictedTraverse('@@images')
-                view = view.__of__(image)
-                return view.tag('image')
-            except:
-                return None
-        elif IATImage.providedBy(image) and image.getImage() is not None:
-            # return image.tag()
-            return 'background: url(%s/image) no-repeat fixed' % image.absolute_url()
-        else:
-            return None
+        # if IImageScaleTraversable and IImageScaleTraversable.providedBy(image):
+        #     try:
+        #         view = image.restrictedTraverse('@@images')
+        #         view = view.__of__(image)
+        #         return view.tag('image')
+        #     except:
+        #         return None
+        # elif IATImage.providedBy(image) and image.getImage() is not None:
+        #     # return image.tag()
+        #     return 'background: url(%s/image) no-repeat fixed' % image.absolute_url()
+        # else:
+        #     return None
+
+        # import pdb; pdb.set_trace()
+
+        scale_util = plone.api.content.get_view('images', image, self.request)
+
+        image = scale_util.scale('image', width=640, height=400, direction='down')
+        image_40 = scale_util.scale('image', width=1024, height=640, direction='down')
+        image_64 = scale_util.scale('image', width=1200, height=750, direction='down')
+        image_75 = scale_util.scale('image', width=1440, height=900, direction='down')
+        image_90 = scale_util.scale('image', width=1900, height=1200, direction='down')
+
+        # image = scale_util.scale('image', width=640, height=400, direction='up')
+        # image_40 = scale_util.scale('image', width=1024, height=640, direction='up')
+        # image_64 = scale_util.scale('image', width=1200, height=750, direction='up')
+        # image_75 = scale_util.scale('image', width=1440, height=900, direction='up')
+        # image_90 = scale_util.scale('image', width=1900, height=1200, direction='up')
+
+        return "<style> \
+          .pd-parallax \
+          {{ \
+            background-image: url({image_url}); \
+          }} \
+          @media print, screen and (min-width: 40em) {{ \
+            .pd-parallax {{ \
+              background-image: url({image_40_url}); \
+            }} \
+            .pd-parallax .card {{ \
+              background-image: none; \
+            }} \
+          }} \
+          @media print, screen and (min-width: 64em) {{ \
+            .pd-parallax {{ \
+              background-image: url({image_64_url}); \
+            }} \
+          }} \
+          @media screen and (min-width: 75em) {{ \
+            .pd-parallax {{ \
+              background-image: url({image_75_url}); \
+            }} \
+          }} \
+          @media screen and (min-width: 90em) {{ \
+            .pd-parallax {{ \
+              background-image: url({image_90_url}); \
+            }} \
+          }} \
+        </style>".format(image_url=image.url, \
+            image_40_url=image_40.url, image_64_url=image_64.url, \
+            image_75_url=image_75.url, image_90_url=image_90.url)
 
 
 class AddForm(base.AddForm):
