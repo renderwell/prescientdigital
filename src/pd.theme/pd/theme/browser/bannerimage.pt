@@ -1,9 +1,10 @@
 <tal:check condition="view/show">
-    <div id="top-banner" class="banner"
-         tal:attributes="style view/banner_style">
+    <div id="top-banner" class="banner">
         <div class="banner__scrim">
             <h1 tal:content="context/Title">About us</h1>
         </div>
+
+        <span tal:replace="structure view/banner_style" />
     </div>
 
     <div id="description-callout" class="callout-panel v-space-2">
