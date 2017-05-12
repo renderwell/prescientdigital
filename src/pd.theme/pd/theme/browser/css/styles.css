@@ -1,7 +1,31 @@
 
 #pd-portal-globalnav,
 #top-banner,
-#description-callout
+#description-callout,
+#drop-sidenav,
+#feature-carousel
 {
     display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid-gallery .column {
+    width: 31.6667%;
+    float: left;
+    margin-right: 1%;
+}
+
+.grid-gallery .column:last-child {
+    margin-right: 0;
+}
+
+.panels .parallax {
+    margin-bottom: 30px;
+}
+
+.panels .parallax div.row {
+    float: none;
 }
