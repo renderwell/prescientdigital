@@ -114,8 +114,8 @@
 
 
         <!-- FEATURE CAROUSEL - CONTAINS SUB-NAVIGATION     -->
-        <replace css:theme="#feature-carousel"
-            css:content="#feature-carousel" />
+        <!-- <replace css:theme="#feature-carousel"
+            css:content="#feature-carousel" /> -->
 
 
         <!-- FOOTER SUBSCRIBE FORM -->

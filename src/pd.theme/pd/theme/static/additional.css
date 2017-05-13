@@ -13,6 +13,7 @@ body {
 
 /*SCROLLING*/
 .off-canvas-content {
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
