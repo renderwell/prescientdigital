@@ -4,7 +4,7 @@
     <div id="stats-counter"
          tal:attributes="
             class python:center_text and 'parallax v-space-2 center-text pd-parallax' or 'parallax v-space-2 pd-parallax'"
-         data-0="background-position:50% -100%;" data-2000="background-position:50% 100%;"
+         data-0="background-position:50% 0%;" data-2000="background-position:50% 100%;"
          >
         <div class="parallax-bg">
             <div class="parallax-center">
