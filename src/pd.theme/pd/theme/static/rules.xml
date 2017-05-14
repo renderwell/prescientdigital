@@ -64,9 +64,9 @@
 
         <!-- TOP NAVIGATION -->
         <replace css:theme="#top-nav-off-canvas"
-            css:content="#pd-portal-globalnav" />
+            css:content-children="#pd-portal-globalnav" />
         <replace css:theme-children="#top-nav"
-            css:content="#pd-portal-globalnav" />
+            css:content-children="#pd-portal-globalnav" />
 
 
         <!-- VIEWLETS CONTAINING PANELS -->

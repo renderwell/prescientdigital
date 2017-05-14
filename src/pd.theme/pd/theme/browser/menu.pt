@@ -1,5 +1,5 @@
-<ul id="pd-portal-globalnav"
-    class="vertical large-horizontal menu navlevel0"
+<div id="pd-portal-globalnav">
+<ul class="pd-portal-globalnav vertical large-horizontal menu navlevel0"
     data-responsive-menu="drilldown large-dropdown">
     <tal:list repeat="itemdict view/getMenu">
       <li tal:attributes="class python:(itemdict['currentItem'] or itemdict['currentParent']) and 'selected' or 'normal'"
@@ -39,3 +39,4 @@
       </li>
     </tal:list>
 </ul>
+</div>
