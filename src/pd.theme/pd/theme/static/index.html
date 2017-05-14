@@ -199,7 +199,13 @@ registerPloneFunction(callGoogleAnalytics);
     </div>
 
     <script src="assets/js/app.js"></script>
-    <script async src="assets/js/foundation.responsiveMenu.min.js"></script>
-    <!-- <script src="additional.js"></script> -->
+    <!-- <script async src="assets/js/foundation.responsiveMenu.min.js"></script> -->
+    <script src="additional.js"></script>
+    <script>
+      var resource = document.createElement('script');
+      resource.src = "/++theme++pd.theme/assets/js/foundation.responsiveMenu.min.js";
+      var script = document.getElementsByTagName('script')[2];
+      script.parentNode.insertBefore(resource, script);
+    </script>
   </body>
 </html>
