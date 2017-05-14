@@ -15,6 +15,13 @@
 
     <style id="style-modifications"></style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
+    <script type="text/javascript">
+/* - analytics.js - */
+// http://prescientdigital.com/portal_javascripts/analytics.js?original=1
+var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.google-analytics.com/ga.js":"http://www.google-analytics.com/ga.js");document.write(unescape('%3Cscript src="'+gaJsHost+'" type="text/javascript"%3E%3C/script%3E'));
+function callGoogleAnalytics(){try{var pageTracker=_gat._getTracker('UA-831192-2');pageTracker._initData();pageTracker._trackPageview()} catch(err){}}
+registerPloneFunction(callGoogleAnalytics);
+</script>
   </head>
   <body>
 
@@ -191,52 +198,7 @@
       </div>
     </div>
 
-
     <script src="assets/js/app.js"></script>
     <!-- <script src="additional.js"></script> -->
-
-    <!--
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    -->
-	<script src="assets/vendor/masterslider/js/jquery.easing.min.js"></script>
-	<!-- MasterSlider main JS file -->
-	<script src="assets/vendor/masterslider/js/masterslider.min.js"></script>
-
-    <script type="text/javascript">
-
-    var slider = new MasterSlider();
-
-    // adds Arrows navigation control to the slider.
-    slider.control('arrows');
-    // slider.control('timebar' , {insertTo:'#masterslider'});
-    slider.control('bullets');
-
-    slider.setup('masterslider' , {
-        width:1400,    // slider standard width
-        height:580,   // slider standard height
-        space:1,
-        layout:'fullwidth',
-        loop:true,
-        preload:0,
-        autoplay:true
-    });
-
-    var testimonial_slider = new MasterSlider();
-
-    testimonial_slider.control("arrows", {autohide:true});
-    testimonial_slider.control("bullets", {autohide:false});
-
-    testimonial_slider.setup("testimonial-slider", {
-        width:1000,
-        // height:320,
-        centerControls:false,
-        space:0,
-        layout:"fillwidth",
-        autoHeight:true,
-        loop:true,
-        autoplay:true
-    });
-
-    </script>
   </body>
 </html>
