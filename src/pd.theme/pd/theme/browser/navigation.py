@@ -22,7 +22,7 @@ class PDMenu(PDUtils):
         navtree_properties = getattr(portal_properties, 'navtree_properties')
 
         query = {}
-        query['path'] = {'query' : '/'.join(portal_state.portal().getPhysicalPath()), 'depth': 3 }
+        query['path'] = {'query' : '/'.join(portal_state.portal().getPhysicalPath()), 'depth': 2 }
 
         blacklist = navtree_properties.getProperty('metaTypesNotToList', ())
         all_types = self.context.portal_catalog.uniqueValuesFor('portal_type')
