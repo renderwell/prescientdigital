@@ -361,3 +361,69 @@ table.grid th {
 table tbody tr:nth-child(2n) {
     background-color: #ffffff;
 }
+
+/*ADDED VIA CMS*/
+body, p {
+    line-height: 1.8;
+}
+
+h1, h2 {
+    line-height: 1.2
+}
+
+
+ol, ul {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.documentDescription, .documentFirstHeading, .pageContent {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+}
+
+#content-core {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.large-9 #content-core {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+}
+
+#search-results-bar {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 30px;
+}
+
+
+#search-results {
+    max-width: 800px;
+    margin: 0 auto
+}
+
+
+.searchResults dt {
+    font-size: 1.5rem;
+    margin: 30px 0 5px;
+    line-height: 120%;
+}
+
+.portletHeadline  {
+    font-family: "Montserrat";
+    font-size: 1.125rem;
+}
+
+.portletHeadline {
+    margin-bottom: 0.3rem;
+}
+
+table.plain td {
+    vertical-align: middle;
+}
+
+.callout {
+    border: none
+}
+/*end ADDED VIA CMS*/
