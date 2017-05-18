@@ -251,6 +251,84 @@ input.searchPage[type="text"] {
 .searchPage h1.documentFirstHeading {
     font-size: 2.5rem;
 }
+/*end PLONE GENERATED CONTENT: Forms*/
+
+/*SEARCH FORM FILTER*/
+#search-results-bar {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    padding: 1em 0;
+}
+#search-results-bar > * {
+    float: left;
+}
+
+#search-results-bar dl.actionMenu {
+    margin-bottom: 0;
+}
+#search-results-bar > * {
+    float: left;
+}
+dl.actionMenu {
+    white-space: nowrap;
+    position: relative;
+    margin-left: 0.5em;
+}
+dl.actionMenu.deactivated dd {
+    display: none;
+}
+dl.actionMenu.activated dd {
+    position: absolute;
+    width: auto;
+    min-width: 100%;
+}
+#search-results-bar dd.actionMenuContent {
+    margin-left: 0;
+    padding-left: 0;
+}
+#search-results-bar .actionMenuContent {
+    margin-top: 1em;
+    padding: 0;
+}
+#search-filter {
+  background: #ddd;
+  margin: 0;
+  padding: 0;
+}
+#content #search-filter fieldset {
+  border: none !important;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+#content #search-filter legend {
+  background: transparent;
+  font-size: 1.1em;
+  padding: 0.5em 0.9em;
+  font-weight: bold;
+}
+#search-filter .field {
+  background: #eee;
+  padding: 1em 1.5em;
+  margin: 0;
+}
+#search-filter .field label {
+  font-weight: normal;
+}
+#search-filter .formControls {
+  text-align: center;
+}
+#search-results-wrapper {
+  margin-top: 1em;
+}
+#searchResultsSort {
+    float: right;
+}
+/*end SEARCH FORM FILTER*/
 
 /*PLONE GENERATED CONTENT: Table Classes*/
 #content table {
