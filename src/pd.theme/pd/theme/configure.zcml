@@ -40,4 +40,7 @@
 
   </configure>
 
+  <browser:jbot
+      directory="jbot"
+      />
 </configure>
