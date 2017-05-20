@@ -2,7 +2,7 @@
      tal:define="portlets portlets | python: (1, 2, 3, '&rarr;');
                  block_width block_width | nothing;
                  pnumber python:len(portlets);
-                 foundation_grid python:pnumber > 0 and 'medium-' + str(12/pnumber) + ' column' or ''"
+                 foundation_grid python:pnumber > 0 and 'medium-' + str(12/pnumber) or ''"
      tal:condition="portlets">
   <tal:loop tal:repeat="portlet portlets"
             tal:condition="python:pnumber &gt; 1">
@@ -12,12 +12,12 @@
                      count python: pnumber!=number and 1 or index;
                      pos  string:position-${count}:${number};
                      position python:index==0 and 'position-0' or pos"
-         tal:attributes="class string:cell width-1:${pnumber} ${position} ${foundation_grid}">
+         tal:attributes="class string:cell width-1:${pnumber} ${position} ${foundation_grid} column">
       <div tal:attributes="class string:content portlet-${index}"
            tal:content="structure portlet" />
     </div>
   </tal:loop>
-  <div class="cell width-full position-0"
+  <div class="cell width-full position-0 column"
        tal:condition="python: pnumber==1">
       <div tal:attributes="class string:content portlet-0"
            tal:content="structure python:portlets[0]" />
