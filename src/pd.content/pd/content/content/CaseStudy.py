@@ -53,16 +53,6 @@ schema = Schema((
     #     default_output_type='text/html',
     #     searchable=1,
     # ),
-    StringField(
-        name='link',
-        widget=StringField._properties['widget'](
-            label='Link',
-            description='Link to the relevant case study page',
-            label_msgid='label_casestudy_link',
-            description_msgid='description_casestudy_link',
-            i18n_domain='pd.content',
-        ),
-    ),
     BooleanField(
         name='featured',
         widget=BooleanField._properties['widget'](
@@ -93,7 +83,7 @@ class CaseStudy(ATDocument):
 
     schema = CaseStudy_schema
 
-    # Methods
-
+    def exclude_from_nav(self):
+        return True
 
 registerType(CaseStudy, PROJECTNAME)

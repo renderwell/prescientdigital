@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step
+    id="PrescientDigitalContentTypes-postInstall"
+    handler="pd.content.setuphandlers.postInstall"
+    title="manual coded post-install for PrescientDigitalContentTypes"
+    version="2012-06-07T15:50:46.006102">
+   <dependency step="PrescientDigitalContentTypes-QI-dependencies"/>
+   manual coded post-install for PrescientDigitalContentTypes
+ </import-step>
+</import-steps>

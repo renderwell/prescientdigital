@@ -29,3 +29,12 @@ img {
 .panels .parallax div.row {
     float: none;
 }
+
+#content ul.menu--pagination {
+    list-style: none;
+    margin: 0;
+}
+
+#content ul.menu--pagination li {
+    display: inline-block;
+}

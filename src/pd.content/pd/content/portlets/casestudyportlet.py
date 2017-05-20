@@ -27,7 +27,10 @@ class Renderer(base.Renderer):
         """
         casestudies = []
 
-        for item in self.context.portal_catalog(portal_type='CaseStudy', featured=True, review_state="published", sort_on='getObjPositionInParent', sort_limit=3):
+        import pdb; pdb.set_trace()
+        for item in self.context.portal_catalog(portal_type="CaseStudy",
+            featured="True", review_state="published",
+            sort_on="getObjPositionInParent", sort_limit=3):
             obj = item.getObject()
             casestudy = {}
             casestudy['title'] = obj.Title()
@@ -39,7 +42,7 @@ class Renderer(base.Renderer):
             casestudy['description'] = description
 
             casestudy['image_url'] = '%s/image' % obj.absolute_url()
-            casestudy['link'] = obj.getLink()
+            casestudy['link'] = obj.absolute_url()
             casestudies.append(casestudy)
 
         return casestudies

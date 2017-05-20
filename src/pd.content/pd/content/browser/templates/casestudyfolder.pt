@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="ceh.ecn_theme">
+<body>
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <div id="casestudyfolder"
+             class="grid-gallery"
+             tal:define="casestudies view/get_casestudies">
+            <div class="row small-up-1 medium-up-3">
+                <div class="column column-block"
+                    tal:repeat="casestudy casestudies">
+                    <a class="grid-gallery-item"
+                        tal:attributes="href casestudy/link">
+                        <span class="grid-gallery-item__image">
+                            <img tal:attributes="src casestudy/image_url" class="thumbnail" alt="" />
+                        </span>
+
+                        <span class="hover-overlay"></span>
+
+                        <span class="grid-gallery-item__text">
+                            <p tal:content="casestudy/description">
+                                Liberty Mutual is a US-based, Fortune 500 insurance organization employing over 45,000 employees with 900 offices across the globe.
+                            </p>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </metal:content-core>
+</metal:content-core>
+</body>
+</html>

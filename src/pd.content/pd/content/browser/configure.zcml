@@ -5,4 +5,12 @@
 
   <include package="plone.app.contentmenu" />
 
+  <browser:page
+      for="pd.content.interfaces.ICaseStudyFolder"
+      name="pd_casestudies"
+      class=".views.CaseStudyFolderView"
+      template="templates/casestudyfolder.pt"
+      permission="zope2.View"
+      />
+
 </configure>
