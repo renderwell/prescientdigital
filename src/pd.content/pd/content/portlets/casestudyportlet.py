@@ -31,7 +31,13 @@ class Renderer(base.Renderer):
             obj = item.getObject()
             casestudy = {}
             casestudy['title'] = obj.Title()
-            casestudy['description'] = obj.Description()
+
+            description = obj.Description()
+            words = description.split(' ')
+            if len(words) > 15:
+                description = '%s ...' % ' '.join(words[:15])
+            casestudy['description'] = description
+
             casestudy['image_url'] = '%s/image' % obj.absolute_url()
             casestudy['link'] = obj.getLink()
             casestudies.append(casestudy)
