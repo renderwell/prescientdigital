@@ -27,7 +27,6 @@ class Renderer(base.Renderer):
         """
         casestudies = []
 
-        import pdb; pdb.set_trace()
         for item in self.context.portal_catalog(portal_type="CaseStudy",
             featured="True", review_state="published",
             sort_on="getObjPositionInParent", sort_limit=3):
