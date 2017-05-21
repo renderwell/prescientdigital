@@ -34,7 +34,9 @@ schema = Schema((
         },
         widget=ImageWidget(
             label='Image',
+            description='Please upload an image of width 600px and height 400px',
             label_msgid='label_casestudy_image',
+            description_msgid='description_casestudy_image',
             i18n_domain='pd.content',
         ),
     ),
@@ -60,7 +62,7 @@ schema = Schema((
             description='If selected, this testimonial will be shown in the slider on the homepage or elsewhere on the site where featured testimonials are displayed.',
             label_msgid='label_testimonial_featured',
             description_msgid='description_testimonial_featured',
-                i18n_domain='pd.content',
+            i18n_domain='pd.content',
         ),
     ),
 ),
