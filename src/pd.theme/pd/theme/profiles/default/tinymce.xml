@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object>
-  <layout>  
+  <layout>
     <styles purge="False">
      <element value="Link Button|span|linkButton"/>
      <element value="Location Icon|span|locationIcon"/>
@@ -10,7 +10,8 @@
      <element value="Whitepapers Icon|span|whitepapersIcon"/>
      <element value="Webinars Icon|span|webinarsIcon"/>
      <element value="Events Icon|span|eventsIcon"/>
+     <element value="Lazyload|img|lazyload"/>
     </styles>
     <content_css value="/++theme++pd.theme/css/visual.css"/>
   </layout>
-</object> 
+</object>
