@@ -8,7 +8,9 @@
             <a class="grid-gallery-item"
                 tal:attributes="href casestudy/link">
                 <span class="grid-gallery-item__image">
-                    <img tal:attributes="src casestudy/image_url" class="thumbnail" alt="" />
+                    <img class="lazyload"
+                         tal:attributes="src casestudy/image_url;
+                                        alt casestudy/title" />
                 </span>
 
                 <span class="hover-overlay"></span>

@@ -12,7 +12,8 @@
                 <a class="feature-carousel__item" data-equalizer-watch
                     tal:repeat="item items"
                     tal:attributes="href item/url">
-                    <img tal:attributes="src item/image;
+                    <img class="lazyload"
+                         tal:attributes="src item/image;
                                          alt item/title" />
                     <div class="text">
                         <h4 tal:content="item/title"></h4>
