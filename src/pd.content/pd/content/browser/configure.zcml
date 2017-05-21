@@ -6,6 +6,14 @@
   <include package="plone.app.contentmenu" />
 
   <browser:page
+      for="pd.content.interfaces.ICaseStudy"
+      name="pd_casestudy"
+      class=".views.CaseStudyView"
+      template="templates/casestudy.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
       for="pd.content.interfaces.ICaseStudyFolder"
       name="pd_casestudies"
       class=".views.CaseStudyFolderView"

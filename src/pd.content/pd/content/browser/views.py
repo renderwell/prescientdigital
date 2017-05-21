@@ -1,6 +1,9 @@
 # coding: utf-8
 from Products.Five.browser import BrowserView
 
+class CaseStudyView(BrowserView):
+    pass
+
 class CaseStudyFolderView(BrowserView):
     def get_casestudies(self):
         casestudies = []

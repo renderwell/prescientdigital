@@ -15,7 +15,7 @@ body {
 /*.ms-container,
 .ms-inner-controls-cont, */
 .ms-slide .ms-slide-bgcont img {
-   height: auto !important; 
+   height: auto !important;
 }
 /*end MASTER SLIDER*/
 
@@ -78,7 +78,6 @@ h5, h6 {
     font-size: 24px
 }
 }
-/*end GENERAL*/
 
 @media print, screen and (min-width: 64em) {
 .center-text .parallax-center {
@@ -89,6 +88,7 @@ h5, h6 {
 .feature-carousel {
     margin-bottom: 30px;
 }
+/*end GENERAL*/
 
 /*ALTERNATIVE PARALLAX IMPLEMENTATION*/
 /*.skrollr-desktop body {
@@ -301,6 +301,10 @@ input.searchPage[type="text"] {
 }
 
 #search-results .contenttype-image img {
+    display: none;
+}
+
+.searchResults > dt > img {
     display: none;
 }
 /*end PLONE GENERATED CONTENT: Forms*/
