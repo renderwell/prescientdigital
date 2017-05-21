@@ -101,7 +101,7 @@ class Testimonial(BaseContent, BrowserDefaultMixin):
 
     schema = Testimonial_schema
 
-    # Methods
-
+    def exclude_from_nav(self):
+        return True
 
 registerType(Testimonial, PROJECTNAME)
