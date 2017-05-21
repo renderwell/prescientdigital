@@ -35,9 +35,9 @@ SlideshowItemSchema = link.ATLinkSchema.copy() + atapi.Schema((
                     ('checkNewsImageMaxSize', V_REQUIRED)),
         widget=ImageWidget(
             description=_(u'help_slideshow_image',
-                default=u'Set Image for Slideshow Item'),
+            default=u'Please provide an image with ratio 2:1, and at least 2000px wide'),
             label=_(u'label_slideshow_image',
-                default=u'Slideshow Image'),
+            default=u'Slideshow Image'),
             show_content_type=False)
         ),
 

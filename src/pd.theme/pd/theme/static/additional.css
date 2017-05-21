@@ -11,11 +11,20 @@ body {
 }
 }*/
 
+/*MASTER SLIDER*/
+/*.ms-container,
+.ms-inner-controls-cont, */
+.ms-slide .ms-slide-bgcont img {
+   height: auto !important; 
+}
+/*end MASTER SLIDER*/
+
 /*SCROLLING*/
 .off-canvas-content {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
+/*end SCROLLING*/
 
 /*GENERAL*/
 h5, h6 {
@@ -69,6 +78,7 @@ h5, h6 {
     font-size: 24px
 }
 }
+/*end GENERAL*/
 
 @media print, screen and (min-width: 64em) {
 .center-text .parallax-center {
@@ -176,7 +186,7 @@ h5, h6 {
     height: 400px;
 }
 }
-
+/*end PARALLAX PORTLET*/
 
 /*PLONE GENERATED CONTENT*/
 /*PLONE GENERATED CONTENT: General*/

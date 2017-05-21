@@ -10,7 +10,7 @@
                 <span class="grid-gallery-item__image">
                     <img class="lazyload"
                          tal:attributes="src casestudy/image_url;
-                                        alt casestudy/title" />
+                                         alt casestudy/title" />
                 </span>
 
                 <span class="hover-overlay"></span>

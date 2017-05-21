@@ -2,8 +2,25 @@
     <tal:repeat tal:repeat="item view/results">
         <div class="ms-slide pdm-slide" data-delay="7"
             tal:define="obj item/getObject">
-            <img tal:attributes="data-src string:${item/getURL}/@@images/image;
-                                 alt item/Description" />
+
+            <!-- <img tal:attributes="data-src string:${item/getURL}/@@images/image;
+                                 alt item/Description" /> -->
+
+            <tal:image define="scales obj/@@images;
+                               lrg_img  python:scales.scale('image', width=2000, height=1000, quality=50, direction='down');
+                               med_img  python:scales.scale('image', width=1200, height=600, quality=50, direction='down');
+                               sml_img  python:scales.scale('image', width=600, height=300, quality=50, direction='down');">
+
+                <img class="lazyload"
+                     tal:condition="sml_img"
+                     tal:attributes="src sml_img/url;
+                                     data-srcset string:${sml_img/url} 300w, ${med_img/url} 600w, ${lrg_img/url} 1200w;
+                                     height sml_img/height;
+                                     width sml_img/width;
+                                     alt item/Description"
+                     data-sizes="auto"
+                     srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAJCAQAAAB3Cq/9AAAAEUlEQVR42mNkIBowjiqliVIACRIACvsH5W4AAAAASUVORK5CYII=" />
+            </tal:image>
 
             <div class="ms-layer slide-content"
                 style="left: 0;top: 180px"

@@ -106,8 +106,6 @@ class Renderer(base.Renderer):
         # else:
         #     return None
 
-        # import pdb; pdb.set_trace()
-
         scale_util = plone.api.content.get_view('images', image, self.request)
 
         image = scale_util.scale('image', width=640, height=400, direction='down')
