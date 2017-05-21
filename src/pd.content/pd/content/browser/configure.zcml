@@ -21,4 +21,12 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      for="pd.content.interfaces.ITestimonialFolder"
+      name="pd_testimonials"
+      class=".views.TestimonialFolderView"
+      template="templates/testimonialfolder.pt"
+      permission="zope2.View"
+      />
+
 </configure>

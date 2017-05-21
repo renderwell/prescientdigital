@@ -17,8 +17,9 @@
    <element value="Testimonial"/>
  </property>
  <property name="allow_discussion">False</property>
- <property name="default_view">folder_listing</property>
+ <property name="default_view">pd_testimonials</property>
  <property name="view_methods">
+  <element value="pd_testimonials"/>
   <element value="folder_summary_view"/>
   <element value="folder_tabular_view"/>
   <element value="atct_album_view"/>

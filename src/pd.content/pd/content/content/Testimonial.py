@@ -30,6 +30,20 @@ schema = Schema((
             i18n_domain='pd.content',
         ),
     ),
+    TextField(
+        name='shortquote',
+        allowable_content_types=('text/plain', ),
+        widget=TextAreaWidget(
+            label='Short Quote',
+            description='An optional shorter version of the testimonial text. \
+            If provided, it will be used in the testimonial slider, instead of \
+            the (possibly) longer quote above. The longer quote will be listed \
+            on the Testimonials page.',
+            label_msgid='label_testimonial_quote',
+            description_msgid='description_testimonial_quote',
+            i18n_domain='pd.content',
+        ),
+    ),
     StringField(
         name='author',
         widget=StringField._properties['widget'](
@@ -48,16 +62,16 @@ schema = Schema((
             i18n_domain='pd.content',
         ),
     ),
-    StringField(
-        name='organisation',
-        widget=StringField._properties['widget'](
-            label='Organisation',
-            description='The organisation the author belongs to.',
-            label_msgid='label_testimonial_organisation',
-            description_msgid='description_testimonial_organisation',
-            i18n_domain='pd.content',
-        ),
-    ),
+    # StringField(
+    #     name='organisation',
+    #     widget=StringField._properties['widget'](
+    #         label='Organisation',
+    #         description='The organisation the author belongs to.',
+    #         label_msgid='label_testimonial_organisation',
+    #         description_msgid='description_testimonial_organisation',
+    #         i18n_domain='pd.content',
+    #     ),
+    # ),
     BooleanField(
         name='featured',
         widget=BooleanField._properties['widget'](

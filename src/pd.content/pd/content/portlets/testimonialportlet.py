@@ -31,10 +31,15 @@ class Renderer(base.Renderer):
         for idx, item in enumerate(self.context.portal_catalog(portal_type='Testimonial', featured=True, review_state="published", sort_on='getObjPositionInParent', sort_limit=5)):
             obj = item.getObject()
             testimonial = {}
-            testimonial['quote'] = obj.getQuote()
+            testimonial['title'] = obj.Title()
+
+            quote = obj.getShortquote()
+            if not quote:
+                quote = obj.getQuote()
+            testimonial['quote'] = quote
+
             testimonial['author'] = obj.getAuthor()
             testimonial['position'] = obj.getPosition()
-            testimonial['organization'] = obj.getOrganisation()
             testimonial['bgcolor'] = colors[idx % 3]
             testimonials.append(testimonial)
 

@@ -5,10 +5,10 @@
         <div class="ms-slide" data-delay="8"
             tal:attributes="style string:background-color:${testimonial/bgcolor}">
             <p class="parag"
-                tal:define="quote testimonial/quote;
+                tal:define="title testimonial/title;
+                            quote testimonial/quote;
                             author testimonial/author;
-                            position testimonial/position;
-                            organization testimonial/organization">
+                            position testimonial/position">
                 &quot;
                 <span tal:replace="quote" />
                 &quot;
@@ -16,7 +16,7 @@
                 <i>&mdash;
                     <span tal:condition="author"><span tal:replace="author" />, </span>
                     <span tal:condition="position"><span tal:replace="position" />, </span>
-                    <span tal:replace="organization" />
+                    <span tal:replace="title" />
                 </i>
             </p>
         </div>
