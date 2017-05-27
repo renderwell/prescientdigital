@@ -68,4 +68,9 @@
     directory="css"
     />
 
+  <browser:resourceDirectory
+    name="pd.theme.js"
+    directory="js"
+    />
+
 </configure>
