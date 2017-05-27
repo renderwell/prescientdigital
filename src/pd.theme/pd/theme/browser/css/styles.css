@@ -39,6 +39,12 @@ img {
     display: inline-block;
 }
 
+.panel > .row {
+    border-bottom: 1px solid darkgrey;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
 .panel-management-wrapper {
     border-bottom: 1px solid darkgrey;
     margin-bottom: 50px;
