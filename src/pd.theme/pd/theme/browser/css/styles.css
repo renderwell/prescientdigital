@@ -42,7 +42,7 @@ img {
 .panel > .row {
     border-bottom: 1px solid darkgrey;
     padding-bottom: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 .panel-management-wrapper {
