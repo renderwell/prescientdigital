@@ -25,7 +25,7 @@
             <div class="ms-layer slide-content"
                 style="left: 0;top: 180px"
                 data-type="text"
-                data-delay="1000"
+                data-delay="250"
                 data-duration="1200"
                 data-ease="easeOutExpo"
                 data-effect="scale(2.8,2.8)">
