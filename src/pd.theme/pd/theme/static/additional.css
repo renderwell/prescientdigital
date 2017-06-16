@@ -186,6 +186,11 @@ h5, h6 {
     height: 400px;
 }
 }
+
+.parallax-center {
+    max-width: 75em;
+}
+
 /*end PARALLAX PORTLET*/
 
 /*PLONE GENERATED CONTENT*/
