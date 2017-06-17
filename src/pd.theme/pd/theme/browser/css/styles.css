@@ -49,3 +49,7 @@ img {
     border-bottom: 1px solid darkgrey;
     margin-bottom: 50px;
 }
+
+#LSResult {
+    display: none !important;
+}
