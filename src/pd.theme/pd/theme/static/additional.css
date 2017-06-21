@@ -413,6 +413,19 @@ dl.actionMenu a, dl.actionMenu div {
 }
 /*end SEARCH FORM FILTER*/
 
+/*FOOTER*/
+.footer-contact {
+    margin-top: 20px;
+}
+
+@media print, screen and (min-width: 40em) {
+.footer-contact {
+    margin-top: 0;
+    text-align: right;
+}
+}
+/*end FOOTER*/
+
 /*PLONE GENERATED CONTENT: Table Classes*/
 #content table {
     margin-bottom: 1em;
