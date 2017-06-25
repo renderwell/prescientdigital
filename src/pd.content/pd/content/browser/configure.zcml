@@ -29,14 +29,6 @@
       permission="zope2.View"
       />
 
-  <browser:page
-      for="*"
-      name="pd_tilegrid"
-      class=".views.TileGrid"
-      template="templates/tilegrid.pt"
-      permission="zope2.View"
-      />
-
   <browser:resourceDirectory
       name="pd.content.images"
       directory="images"
