@@ -18,4 +18,8 @@
         addview="parallax_portlet"
         title="Parallax Portlet"
         description="Shows content on a background image with parallax effect." />
+    <portlet
+        addview="tiles_portlet"
+        title="Tiles Portlet"
+        description="Display links to pages as a grid of tiles" />
 </portlets>

@@ -1,0 +1,35 @@
+<div class="tilesportlet"
+    tal:define="tiles_title view/get_title;
+                tiles view/get_tiles">
+    <h3 tal:condition="tiles_title"
+        tal:content="tiles_title"></h3>
+
+    <div class="row small-up-1 medium-up-3">
+        <tal:tiles condition="tiles">
+            <div class="column column-block"
+                tal:repeat="tile tiles">
+                <a class="grid-gallery-item"
+                    tal:attributes="href tile/url">
+                    <span class="grid-gallery-item__image">
+                        <img tal:attributes="src tile/img_url;
+                                             alt tile/title"  />
+                    </span>
+
+                    <span class="hover-overlay"></span>
+
+                    <span class="grid-gallery-item__text">
+                        <p tal:content="tile/title">
+                            Liberty Mutual is a US-based, Fortune 500 insurance
+                        </p>
+                    </span>
+                </a>
+            </div>
+        </tal:tiles>
+
+        <tal:notiles condition="not:tiles">
+            <p>There has been an error with the Tiles Portlet: Something might
+                be wrong with the format of the paths entered into the "Pages"
+                field', or a page might have not been found</p>
+        </tal:notiles>
+    </div>
+</div>

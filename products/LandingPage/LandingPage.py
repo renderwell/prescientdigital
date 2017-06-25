@@ -64,8 +64,27 @@ LandingSchema  = ATFolderSchema.copy() + Schema((
                      label_msgid       = "landing_textblockslabel",
                      description_msgid = "landing_textblocks",
                      description       = "Show the individual text blocks in full.",)),
-    ))
 
+    ImageField("tileImage",
+        searchable=False,
+        sizes= {
+            'large'   : (768, 768),
+            'preview' : (400, 400),
+            'mini'    : (200, 200),
+            'thumb'   : (128, 128),
+            'tile'    :  (64, 64),
+            'icon'    :  (32, 32),
+            'listing' :  (16, 16),
+        },
+        widget=ImageWidget(
+            label='Tile Image',
+            description='Please upload an image of width 600px and height 400px',
+            label_msgid='label_page_image',
+            description_msgid='description_page_image',
+        ),
+    ),
+),
+)
 
 # activate the content type by registering it
 class LandingPage(ATFolder):

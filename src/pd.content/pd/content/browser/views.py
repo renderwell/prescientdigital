@@ -52,3 +52,7 @@ class TestimonialFolderView(BrowserView):
             testimonials.append(testimonial)
 
         return testimonials
+
+class TileGrid(BrowserView):
+    def get_tiles(self):
+        return 'njurrr'

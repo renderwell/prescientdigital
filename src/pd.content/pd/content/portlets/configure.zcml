@@ -40,4 +40,15 @@
      editview=".parallaxportlet.EditForm"
      />
 
+  <plone:portlet
+     name="tiles_portlet"
+     interface=".tilesportlet.ITilesPortlet"
+     assignment=".tilesportlet.Assignment"
+     view_permission="zope2.View"
+     edit_permission="cmf.ManagePortal"
+     renderer=".tilesportlet.Renderer"
+     addview=".tilesportlet.AddForm"
+     editview=".tilesportlet.EditForm"
+     />
+
 </configure>
