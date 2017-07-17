@@ -59,9 +59,9 @@ schema = Schema((
         name='featured',
         widget=BooleanField._properties['widget'](
             label='Featured',
-            description='If selected, this testimonial will be shown in the slider on the homepage or elsewhere on the site where featured testimonials are displayed.',
-            label_msgid='label_testimonial_featured',
-            description_msgid='description_testimonial_featured',
+            description='If selected, this case study will be shown in the slider on the homepage or elsewhere on the site where featured case studies are displayed.',
+            label_msgid='label_case_study_featured',
+            description_msgid='description_case_study_featured',
             i18n_domain='pd.content',
         ),
     ),
