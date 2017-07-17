@@ -53,3 +53,8 @@ img {
 #LSResult {
     display: none !important;
 }
+
+/* tileImage schema extender field cannot be hidden in the normal way by accessing the schema */
+.portaltype-casestudy #archetypes-fieldname-tileImage {
+    display: none;
+}
