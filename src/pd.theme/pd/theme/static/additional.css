@@ -88,6 +88,10 @@ h5, h6 {
 .feature-carousel {
     margin-bottom: 30px;
 }
+
+.breadcrumbs {
+    font-size: 90%;
+}
 /*end GENERAL*/
 
 /*ALTERNATIVE PARALLAX IMPLEMENTATION*/
