@@ -95,6 +95,11 @@
             css:content="#description-callout" />
 
 
+        <!-- BREADCRUMBS -->
+        <replace css:theme-children="#breadcrumbs"
+            css:content="#portal-breadcrumbs" />
+
+
         <!-- HEADING AND DESCRIPTION -->
         <replace css:theme="#documentFirstHeading"
             css:content="#content > .documentFirstHeading" />
@@ -102,10 +107,11 @@
             css:content="#content > .documentDescription" />
 
 
-        <!-- DROP HEADING AND DESCRIPTION ON PAGES WITH A BANNER -->
+        <!-- DROP HEADING, DESCRIPTION AND BREADCRUMBS ON PAGES WITH A BANNER -->
         <rules css:if-content="#top-banner">
             <drop css:content="#content > .documentFirstHeading" />
             <drop css:content="#content > .documentDescription" />
+            <drop css:theme="#breadcrumbs" />
         </rules>
 
 
