@@ -63,6 +63,14 @@
      permission="zope2.View"
      />
 
+  <browser:viewlet
+     name="pd_copyright"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     class=".copyright.CopyRight"
+     template="copyright.pt"
+     permission="zope2.View"
+     />
+
   <browser:resourceDirectory
     name="pd.theme.css"
     directory="css"

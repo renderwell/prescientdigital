@@ -146,6 +146,11 @@
             css:content="#feature-carousel" />
 
 
+        <!-- FOOTER COPYRIGHT -->
+        <replace css:theme="#copyright"
+            css:content="#copyright" />
+
+
         <!-- FOOTER SUBSCRIBE FORM -->
         <replace css:theme="#pd-subscribe"
             css:content=".subscribePortlet #addForm" />

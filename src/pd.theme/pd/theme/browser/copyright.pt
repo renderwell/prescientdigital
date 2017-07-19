@@ -1,0 +1,3 @@
+<div id="copyright">
+    &copy; Copyright <tal:year replace="view/get_year" /> by Prescient Digital Media. All Rights.
+</div>
