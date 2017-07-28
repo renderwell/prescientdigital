@@ -609,7 +609,7 @@ table.plain td {
 }
 }*/
 
-.top-nav {
+/*.top-nav {
     position: absolute!important;
     width: 1px;
     height: 1px;
@@ -624,5 +624,5 @@ table.plain td {
 .reveal-search {
     right: 80px;
     font-size: 1.125rem;
-}
+}*/
 }
