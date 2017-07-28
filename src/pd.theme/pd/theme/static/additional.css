@@ -599,3 +599,11 @@ table.plain td {
     border: none
 }
 /*end ADDED VIA CMS*/
+
+/* Fix for Firefox and Chrome on Windows */
+@media screen and (min-width: 1024px) and (max-width: 1120px) {
+.top-nav .navlevel0 > li > a {
+    padding: 0 12px;
+    font-size: 12px;
+}
+}
