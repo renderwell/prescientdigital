@@ -602,27 +602,13 @@ table.plain td {
 
 /* Fix for Firefox and Chrome on Windows */
 @media screen and (min-width: 1024px) and (max-width: 1120px) {
-/*
 .top-nav .navlevel0 > li > a {
     padding: 0 12px;
     font-size: 12px;
 }
-}*/
 
-/*.top-nav {
-    position: absolute!important;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
+.top-nav .navlevel1 > li > a {
+    padding: 6px 12px;
+    font-size: 12px;
 }
-
-.menu-icon {
-    display: inline-block;
-}
-
-.reveal-search {
-    right: 80px;
-    font-size: 1.125rem;
-}*/
 }
