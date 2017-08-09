@@ -1,5 +1,6 @@
 <div class="tilesportlet"
     tal:define="tiles_title view/get_title;
+                show_tile_titles view/data/showTitle;
                 tiles view/get_tiles">
     <h3 tal:condition="tiles_title"
         tal:content="tiles_title"></h3>
@@ -18,11 +19,20 @@
                     <span class="hover-overlay"></span>
 
                     <span class="grid-gallery-item__text">
-                        <p tal:content="tile/title">
+                        <p tal:condition="not:show_tile_titles"
+                           tal:content="tile/title">
+                            Liberty Mutual is a US-based, Fortune 500 insurance
+                        </p>
+                        <p tal:condition="show_tile_titles"
+                           tal:content="tile/description">
                             Liberty Mutual is a US-based, Fortune 500 insurance
                         </p>
                     </span>
                 </a>
+
+                <h4 class="grid-gallery-item-title text-center"
+                    tal:condition="show_tile_titles"
+                    tal:content="tile/title"></h4>
             </div>
         </tal:tiles>
 

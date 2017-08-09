@@ -26,14 +26,25 @@ class ITilesPortlet(IPortletDataProvider):
         required=True
     )
 
+    showTitle = schema.Bool(
+        title=_(u"Show Tile Titles"),
+        description=_(u"Tick this box if you wish to display the title underneath each tile, and the description (if present) on hover."),
+        required=False,
+        default=False
+    )
+
 
 class Assignment(base.Assignment):
     implements(ITilesPortlet)
+
+    # For backwards compatability, i.e. exsiting portlets break when you add new fields
+    showTitle = None
 
     def __init__(self, tilesTitle=u"", pages=u""):
         """Initialize all variables."""
         self.tilesTitle = tilesTitle
         self.pages = pages
+        self.showTitle = showTitle
 
 
 class Renderer(base.Renderer):
@@ -53,6 +64,12 @@ class Renderer(base.Renderer):
                     page = plone.api.content.get(path)
                     if page:
                         title = page.Title()
+
+                        description = page.Description()
+                        words = description.split(' ')
+                        if len(words) > 15:
+                            description = '%s ...' % ' '.join(words[:15])
+
                         url = page.absolute_url()
                         img_url = '%s/tileImage' % url
 
@@ -62,6 +79,7 @@ class Renderer(base.Renderer):
 
                         tile = {
                             'title': title,
+                            'description': description,
                             'url': url,
                             'img_url': img_url
                             }
