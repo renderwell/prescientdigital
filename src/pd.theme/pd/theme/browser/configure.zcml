@@ -9,6 +9,11 @@
       directory="icons"
       />
 
+  <browser:resourceDirectory
+      name="pd.theme.images"
+      directory="images"
+      />
+
   <browser:page
       name="twitter-controlpanel"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
@@ -36,6 +41,13 @@
      name="pd_marker_viewlet"
      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
      class=".markerviewlet.MarkerViewlet"
+     permission="zope2.View"
+     />
+
+  <browser:viewlet
+     name="pd_social_media_share"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     class=".socialmediashare.SocialMediaShare"
      permission="zope2.View"
      />
 

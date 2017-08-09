@@ -1,0 +1,27 @@
+<tal:defs define="portal context/@@plone_portal_state/portal;
+                  url_title python:context.Title().replace(' ', '+')">
+    <div id="social-media-share" class="social-media-share v-space-3">
+        <div class="text-center">
+            <a data-site=""
+                tal:attributes="href string:http://www.facebook.com/sharer.php?u=${request/ACTUAL_URL}"
+                target="_blank">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-facebook.png" title="Facebook" alt="Share on Facebook">
+            </a>
+            <a data-site=""
+                tal:attributes="href string:https://plus.google.com/share?url=${request/ACTUAL_URL}"
+                target="_blank">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-google.png" title="Facebook" alt="Share on Facebook">
+            </a>
+            <a data-site=""
+                tal:attributes="href string:http://twitter.com/share?url=${request/ACTUAL_URL}/&amp;text=${url_title}"
+                target="_blank">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-twitter.png" title="Facebook" alt="Share on Facebook">
+            </a>
+            <a data-site="linkedin"
+                tal:attributes="href string:http://www.linkedin.com/shareArticle?mini=true&amp;url=${request/ACTUAL_URL}"
+                target="_blank">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-linkedin.png" title="Facebook" alt="Share on Facebook">
+            </a>
+        </div>
+    </div>
+</tal:defs>

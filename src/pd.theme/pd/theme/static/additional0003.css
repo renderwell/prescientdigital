@@ -613,11 +613,16 @@ table.plain td {
 }
 }
 
-/*  */
+/* Top menu drop-downs appearing behind slider in Edge fix */
 .site-header {
     z-index: 1;
 }
 
 .off-canvas-content {
     z-index: 0;
+}
+
+/* Social Media Share icons */
+.social-media-share img {
+    width: 44px;
 }

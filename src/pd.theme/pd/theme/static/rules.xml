@@ -141,6 +141,11 @@
             css:content-children=".portletNavigationTree" />
 
 
+        <!-- SOCIAL MEDIA SHARE LINKS -->
+        <replace css:theme="#social-media-share"
+            css:content="#social-media-share" />
+
+
         <!-- FEATURE CAROUSEL - CONTAINS SUB-NAVIGATION     -->
         <replace css:theme="#feature-carousel"
             css:content="#feature-carousel" />
