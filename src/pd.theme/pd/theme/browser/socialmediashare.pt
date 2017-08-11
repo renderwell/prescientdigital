@@ -10,17 +10,22 @@
             <a data-site=""
                 tal:attributes="href string:https://plus.google.com/share?url=${request/ACTUAL_URL}"
                 target="_blank">
-                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-google.png" title="Facebook" alt="Share on Facebook">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-google.png" title="Google Plus" alt="Share on Google Plus">
             </a>
             <a data-site=""
                 tal:attributes="href string:http://twitter.com/share?url=${request/ACTUAL_URL}/&amp;text=${url_title}"
                 target="_blank">
-                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-twitter.png" title="Facebook" alt="Share on Facebook">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-twitter.png" title="Twitter" alt="Share on Twitter">
             </a>
             <a data-site="linkedin"
                 tal:attributes="href string:http://www.linkedin.com/shareArticle?mini=true&amp;url=${request/ACTUAL_URL}"
                 target="_blank">
-                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-linkedin.png" title="Facebook" alt="Share on Facebook">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-linkedin.png" title="LinkedIn" alt="Share on LinkedIn">
+            </a>
+            <a data-site=""
+                tal:attributes="href string:https://www.reddit.com/submit?url=${request/ACTUAL_URL}&amp;title=${url_title}"
+                target="_blank">
+                <img tal:attributes="src string:${portal/absolute_url}/++resource++pd.theme.images/sms-reddit.png" title="Reddit" alt="Share on Reddit">
             </a>
         </div>
     </div>
