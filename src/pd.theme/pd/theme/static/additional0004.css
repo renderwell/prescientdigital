@@ -256,10 +256,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="text"] {
-    padding: 1.5rem 0.5rem;
-}
-
 dl, ol, ul {
     line-height: 1.8em;
 }
