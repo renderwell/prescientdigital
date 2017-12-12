@@ -164,5 +164,9 @@
         <!-- FROM ORIGINAL - DROP DOCUMENT ACTIONS -->
         <drop css:content=".documentActions" />
 
+        <!-- WEB STATS FROM @@site-controlpanel -->
+        <replace css:theme="#web-stats"
+            css:content="#web-stats" />
+
     </rules>
 </rules>
