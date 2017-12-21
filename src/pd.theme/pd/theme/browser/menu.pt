@@ -38,5 +38,6 @@
     	</ul>
       </li>
     </tal:list>
+    <li class="contact-us-link"><a href="/about-us/questions-comments-feedback"><span>Contact Us</span></a></li>
 </ul>
 </div>

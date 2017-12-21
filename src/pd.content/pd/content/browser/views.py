@@ -1,5 +1,6 @@
 # coding: utf-8
 from Products.Five.browser import BrowserView
+from Products.CMFCore.utils import getToolByName
 
 class CaseStudyView(BrowserView):
     pass
@@ -56,3 +57,37 @@ class TestimonialFolderView(BrowserView):
 class TileGrid(BrowserView):
     def get_tiles(self):
         return 'njurrr'
+
+
+class getCMFUIDs(BrowserView):
+    def get_cmf_uids(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+
+        items = []
+
+        for i in catalog():
+            item_dict = {}
+
+            cmf_uid = i.cmf_uid
+
+            if cmf_uid:
+                url = i.getURL()
+
+                item_dict['cmf_uid'] = cmf_uid
+                item_dict['url'] = url
+
+                items.append(item_dict)
+
+        items = sorted(items, key=lambda k: (k['cmf_uid']))
+
+        items_list = []
+
+        for i in items:
+            cmf_uid = i['cmf_uid']
+            url = i['url']
+            items_list.append('%(cmf_uid)s: <a href=%(url)s target="_blank">%(url)s</a>' % {'cmf_uid': cmf_uid, 'url': url})
+
+        return '<br />'.join(items_list)
+
+
+

@@ -34,4 +34,12 @@
       directory="images"
       />
 
+  <browser:page
+      for="*"
+      name="get_cmf_uids"
+      class=".views.getCMFUIDs"
+      attribute="get_cmf_uids"
+      permission="zope2.View"
+      />
+
 </configure>

@@ -626,3 +626,11 @@ table.plain td {
 .social-media-share img {
     width: 44px;
 }
+
+/* Contact us link in top menu */
+.menu > li.contact-us-link > a {
+    color: #2178b0;
+    font-weight: bold;
+}
+
+
