@@ -83,6 +83,14 @@
      permission="zope2.View"
      />
 
+  <browser:viewlet
+     name="constant_contact"
+     manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+     class=".constantcontact.ConstantContact"
+     template="constantcontact.pt"
+     permission="zope2.View"
+     />
+
   <browser:resourceDirectory
     name="pd.theme.css"
     directory="css"
