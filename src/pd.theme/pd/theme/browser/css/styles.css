@@ -58,3 +58,9 @@ img {
 .portaltype-casestudy #archetypes-fieldname-tileImage {
     display: none;
 }
+
+.grid-gallery-item {
+    display: block;
+    width: 365px;
+}
+
